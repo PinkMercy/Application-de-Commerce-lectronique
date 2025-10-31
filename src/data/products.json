@@ -1,202 +1,607 @@
-[
-  {
-    "id": 1,
-    "name": "Smartphone Galaxy X15",
-    "category": "Électronique",
-    "price": 799.99,
-    "rating": 4.6,
-    "stock": 25,
-    "description": "Smartphone performant avec écran AMOLED 6.7 pouces, 128 Go de stockage et appareil photo 108 MP.",
-    "images": ["/images/products/galaxy-x15-1.jpg", "/images/products/galaxy-x15-2.jpg", "/images/products/galaxy-x15-3.jpg"]
-  },
-  {
-    "id": 2,
-    "name": "Ordinateur Portable ZenBook 14",
-    "category": "Informatique",
-    "price": 1199.99,
-    "rating": 4.8,
-    "stock": 10,
-    "description": "Laptop ultra-fin avec processeur Intel i7, 16 Go RAM et SSD 512 Go.",
-    "images": ["/images/products/zenbook-14-1.jpg", "/images/products/zenbook-14-2.jpg", "/images/products/zenbook-14-3.jpg"]
-  },
-  {
-    "id": 3,
-    "name": "Montre Connectée FitPro X",
-    "category": "Accessoires",
-    "price": 149.99,
-    "rating": 4.3,
-    "stock": 40,
-    "description": "Montre connectée avec capteur cardiaque, GPS intégré et autonomie de 7 jours.",
-    "images": ["/images/products/fitpro-x-1.jpg", "/images/products/fitpro-x-2.jpg", "/images/products/fitpro-x-3.jpg"]
-  },
-  {
-    "id": 4,
-    "name": "Casque Audio BassBoost 500",
-    "category": "Audio",
-    "price": 89.99,
-    "rating": 4.1,
-    "stock": 60,
-    "description": "Casque sans fil Bluetooth avec réduction de bruit active et autonomie de 30 heures.",
-    "images": ["/images/products/bassboost-500-1.jpg", "/images/products/bassboost-500-2.jpg", "/images/products/bassboost-500-3.jpg"]
-  },
-  {
-    "id": 5,
-    "name": "Chaise de Bureau Ergonomique ProSeat",
-    "category": "Maison",
-    "price": 219.99,
-    "rating": 4.7,
-    "stock": 15,
-    "description": "Chaise de bureau ajustable en maille respirante, avec support lombaire intégré.",
-    "images": ["/images/products/proseat-1.jpg", "/images/products/proseat-2.jpg", "/images/products/proseat-3.jpg"]
-  },
-  {
-    "id": 6,
-    "name": "Caméra de Sécurité WiFi 360°",
-    "category": "Électronique",
-    "price": 99.99,
-    "rating": 4.2,
-    "stock": 35,
-    "description": "Caméra connectée Full HD avec vision nocturne et détection de mouvement.",
-    "images": ["/images/products/camera-360-1.jpg", "/images/products/camera-360-2.jpg", "/images/products/camera-360-3.jpg"]
-  },
-  {
-    "id": 7,
-    "name": "Enceinte Bluetooth SoundBox 2",
-    "category": "Audio",
-    "price": 59.99,
-    "rating": 4.4,
-    "stock": 80,
-    "description": "Enceinte portable étanche avec son stéréo 20W et autonomie de 12 heures.",
-    "images": ["/images/products/soundbox-2-1.jpg", "/images/products/soundbox-2-2.jpg", "/images/products/soundbox-2-3.jpg"]
-  },
-  {
-    "id": 8,
-    "name": "Clavier Mécanique RGB K70",
-    "category": "Informatique",
-    "price": 139.99,
-    "rating": 4.5,
-    "stock": 50,
-    "description": "Clavier gamer mécanique avec rétroéclairage RGB et switches rapides.",
-    "images": ["/images/products/k70-1.jpg", "/images/products/k70-2.jpg", "/images/products/k70-3.jpg"]
-  },
-  {
-    "id": 9,
-    "name": "Écouteurs Sans Fil AirPods Style",
-    "category": "Audio",
-    "price": 79.99,
-    "rating": 4.0,
-    "stock": 90,
-    "description": "Écouteurs Bluetooth avec boîtier de recharge sans fil et suppression du bruit.",
-    "images": ["/images/products/airpods-style-1.jpg", "/images/products/airpods-style-2.jpg", "/images/products/airpods-style-3.jpg"]
-  },
-  {
-    "id": 10,
-    "name": "Lampe LED de Bureau Intelligente",
-    "category": "Maison",
-    "price": 49.99,
-    "rating": 4.3,
-    "stock": 45,
-    "description": "Lampe LED à intensité réglable et port USB intégré.",
-    "images": ["/images/products/lampe-led-1.jpg", "/images/products/lampe-led-2.jpg", "/images/products/lampe-led-3.jpg"]
-  },
-  {
-    "id": 11,
-    "name": "Tapis de Souris XXL RGB",
-    "category": "Informatique",
-    "price": 34.99,
-    "rating": 4.6,
-    "stock": 70,
-    "description": "Tapis gamer avec rétroéclairage RGB et surface antidérapante.",
-    "images": ["/images/products/mousepad-rgb-1.jpg", "/images/products/mousepad-rgb-2.jpg"]
-  },
-  {
-    "id": 12,
-    "name": "Manette Sans Fil DualPlay",
-    "category": "Gaming",
-    "price": 59.99,
-    "rating": 4.5,
-    "stock": 55,
-    "description": "Manette universelle compatible PC, Android et consoles avec retour haptique.",
-    "images": ["/images/products/dualplay-1.jpg", "/images/products/dualplay-2.jpg"]
-  },
-  {
-    "id": 13,
-    "name": "Lisseur Cheveux SilkPro 3000",
-    "category": "Beauté",
-    "price": 89.99,
-    "rating": 4.4,
-    "stock": 40,
-    "description": "Fer à lisser professionnel avec plaques en céramique et contrôle de température.",
-    "images": ["/images/products/silkpro-1.jpg", "/images/products/silkpro-2.jpg"]
-  },
-  {
-    "id": 14,
-    "name": "Sneakers AirMotion Blanc",
-    "category": "Mode",
-    "price": 119.99,
-    "rating": 4.7,
-    "stock": 30,
-    "description": "Chaussures de sport légères et respirantes avec semelle amortissante.",
-    "images": ["/images/products/airmotion-1.jpg", "/images/products/airmotion-2.jpg"]
-  },
-  {
-    "id": 15,
-    "name": "Sac à Dos CityPack 25L",
-    "category": "Accessoires",
-    "price": 69.99,
-    "rating": 4.5,
-    "stock": 60,
-    "description": "Sac à dos imperméable avec compartiment pour ordinateur portable 15 pouces.",
-    "images": ["/images/products/citypack-1.jpg", "/images/products/citypack-2.jpg"]
-  },
-  {
-    "id": 16,
-    "name": "Machine à Café Barista Mini",
-    "category": "Maison",
-    "price": 149.99,
-    "rating": 4.8,
-    "stock": 25,
-    "description": "Machine à espresso compacte avec mousseur à lait intégré.",
-    "images": ["/images/products/barista-mini-1.jpg", "/images/products/barista-mini-2.jpg"]
-  },
-  {
-    "id": 17,
-    "name": "Moniteur Gaming 27'' 2K",
-    "category": "Informatique",
-    "price": 299.99,
-    "rating": 4.9,
-    "stock": 20,
-    "description": "Écran 27 pouces QHD avec taux de rafraîchissement 165Hz et 1ms de latence.",
-    "images": ["/images/products/monitor-27q-1.jpg", "/images/products/monitor-27q-2.jpg"]
-  },
-  {
-    "id": 18,
-    "name": "Tablette Graphique ArtPad S6",
-    "category": "Informatique",
-    "price": 159.99,
-    "rating": 4.6,
-    "stock": 18,
-    "description": "Tablette graphique avec stylet sensible à la pression (8192 niveaux).",
-    "images": ["/images/products/artpad-s6-1.jpg", "/images/products/artpad-s6-2.jpg"]
-  },
-  {
-    "id": 19,
-    "name": "Drone Aérien SkyView X8",
-    "category": "Électronique",
-    "price": 349.99,
-    "rating": 4.5,
-    "stock": 12,
-    "description": "Drone caméra 4K avec stabilisation gyroscopique et autonomie de 40 minutes.",
-    "images": ["/images/products/skyview-x8-1.jpg", "/images/products/skyview-x8-2.jpg"]
-  },
-  {
-    "id": 20,
-    "name": "Brosse Nettoyante Visage GlowSkin",
-    "category": "Beauté",
-    "price": 39.99,
-    "rating": 4.2,
-    "stock": 70,
-    "description": "Brosse électrique waterproof pour nettoyage en profondeur du visage.",
-    "images": ["/images/products/glowskin-1.jpg", "/images/products/glowskin-2.jpg"]
-  }
-]
+{
+  "categories": [
+    {
+      "id": "gpu",
+      "name": "Graphics Cards",
+      "description": "High-performance GPUs for gaming and creative work",
+      "image": "https://images.unsplash.com/photo-1591488320449-011701bb6704?w=500",
+      "icon": "🎮"
+    },
+    {
+      "id": "cpu",
+      "name": "Processors",
+      "description": "Powerful CPUs for ultimate performance",
+      "image": "https://images.unsplash.com/photo-1555617981-dac3880eac6e?w=500",
+      "icon": "⚡"
+    },
+    {
+      "id": "ram",
+      "name": "Memory",
+      "description": "Fast and reliable RAM modules",
+      "image": "https://images.unsplash.com/photo-1562976540-1502c2145186?w=500",
+      "icon": "💾"
+    },
+    {
+      "id": "motherboard",
+      "name": "Motherboards",
+      "description": "Premium motherboards for your build",
+      "image": "https://images.unsplash.com/photo-1588872657578-7efd1f1555ed?w=500",
+      "icon": "🔌"
+    },
+    {
+      "id": "storage",
+      "name": "Storage",
+      "description": "SSDs and HDDs for all your data needs",
+      "image": "https://images.unsplash.com/photo-1597872200969-2b65d56bd16b?w=500",
+      "icon": "💿"
+    },
+    {
+      "id": "case",
+      "name": "Cases",
+      "description": "Stylish and functional PC cases",
+      "image": "https://images.unsplash.com/photo-1587202372634-32705e3bf49c?w=500",
+      "icon": "🖥️"
+    },
+    {
+      "id": "psu",
+      "name": "Power Supplies",
+      "description": "Reliable power for your system",
+      "image": "https://images.unsplash.com/photo-1609091839311-d5365f9ff1c5?w=500",
+      "icon": "🔋"
+    },
+    {
+      "id": "cooling",
+      "name": "Cooling",
+      "description": "Keep your system running cool",
+      "image": "https://images.unsplash.com/photo-1587202372775-e229f172b9d7?w=500",
+      "icon": "❄️"
+    },
+    {
+      "id": "peripherals",
+      "name": "Peripherals",
+      "description": "Keyboards, mice, and accessories",
+      "image": "https://images.unsplash.com/photo-1587829741301-dc798b83add3?w=500",
+      "icon": "⌨️"
+    },
+    {
+      "id": "monitor",
+      "name": "Monitors",
+      "description": "High-refresh gaming monitors",
+      "image": "https://images.unsplash.com/photo-1527443224154-c4a3942d3acf?w=500",
+      "icon": "🖥️"
+    }
+  ],
+  "products": [
+    {
+      "id": "gpu-001",
+      "name": "NVIDIA RTX 4090",
+      "category": "gpu",
+      "brand": "NVIDIA",
+      "price": 1599.99,
+      "originalPrice": 1799.99,
+      "rating": 4.9,
+      "reviews": 1247,
+      "stock": 15,
+      "image": "https://images.unsplash.com/photo-1591488320449-011701bb6704?w=800",
+      "images": [
+        "https://images.unsplash.com/photo-1591488320449-011701bb6704?w=800",
+        "https://images.unsplash.com/photo-1587202372634-32705e3bf49c?w=800"
+      ],
+      "description": "The ultimate gaming GPU with 24GB GDDR6X memory, ray tracing, and DLSS 3.0 technology.",
+      "specs": {
+        "Memory": "24GB GDDR6X",
+        "Boost Clock": "2.52 GHz",
+        "CUDA Cores": "16384",
+        "TDP": "450W",
+        "Ports": "3x DisplayPort 1.4a, 1x HDMI 2.1"
+      },
+      "features": ["Ray Tracing", "DLSS 3.0", "8K Ready", "RGB Lighting"],
+      "featured": true,
+      "sale": true
+    },
+    {
+      "id": "gpu-002",
+      "name": "AMD Radeon RX 7900 XTX",
+      "category": "gpu",
+      "brand": "AMD",
+      "price": 999.99,
+      "rating": 4.7,
+      "reviews": 892,
+      "stock": 23,
+      "image": "https://images.unsplash.com/photo-1591488320449-011701bb6704?w=800",
+      "images": [
+        "https://images.unsplash.com/photo-1591488320449-011701bb6704?w=800"
+      ],
+      "description": "AMD's flagship GPU with 24GB GDDR6 memory and exceptional 4K gaming performance.",
+      "specs": {
+        "Memory": "24GB GDDR6",
+        "Boost Clock": "2.5 GHz",
+        "Stream Processors": "6144",
+        "TDP": "355W",
+        "Ports": "2x DisplayPort 2.1, 2x HDMI 2.1"
+      },
+      "features": ["Ray Tracing", "FSR 3.0", "4K Gaming", "Infinity Cache"],
+      "featured": true
+    },
+    {
+      "id": "gpu-003",
+      "name": "NVIDIA RTX 4070 Ti",
+      "category": "gpu",
+      "brand": "NVIDIA",
+      "price": 799.99,
+      "rating": 4.8,
+      "reviews": 654,
+      "stock": 31,
+      "image": "https://images.unsplash.com/photo-1591488320449-011701bb6704?w=800",
+      "images": [
+        "https://images.unsplash.com/photo-1591488320449-011701bb6704?w=800"
+      ],
+      "description": "High-performance 1440p gaming with 12GB GDDR6X and advanced ray tracing.",
+      "specs": {
+        "Memory": "12GB GDDR6X",
+        "Boost Clock": "2.61 GHz",
+        "CUDA Cores": "7680",
+        "TDP": "285W"
+      },
+      "features": ["DLSS 3.0", "Ray Tracing", "1440p Optimized"]
+    },
+    {
+      "id": "cpu-001",
+      "name": "Intel Core i9-14900K",
+      "category": "cpu",
+      "brand": "Intel",
+      "price": 589.99,
+      "originalPrice": 649.99,
+      "rating": 4.8,
+      "reviews": 1023,
+      "stock": 42,
+      "image": "https://images.unsplash.com/photo-1555617981-dac3880eac6e?w=800",
+      "images": [
+        "https://images.unsplash.com/photo-1555617981-dac3880eac6e?w=800"
+      ],
+      "description": "24-core powerhouse with up to 6.0 GHz boost clock for extreme gaming and content creation.",
+      "specs": {
+        "Cores": "24 (8P + 16E)",
+        "Threads": "32",
+        "Base Clock": "3.0 GHz",
+        "Boost Clock": "6.0 GHz",
+        "Cache": "36MB",
+        "TDP": "125W (253W Turbo)"
+      },
+      "features": ["Unlocked", "DDR5 Support", "PCIe 5.0", "Integrated Graphics"],
+      "featured": true,
+      "sale": true
+    },
+    {
+      "id": "cpu-002",
+      "name": "AMD Ryzen 9 7950X",
+      "category": "cpu",
+      "brand": "AMD",
+      "price": 549.99,
+      "rating": 4.9,
+      "reviews": 876,
+      "stock": 28,
+      "image": "https://images.unsplash.com/photo-1555617981-dac3880eac6e?w=800",
+      "images": [
+        "https://images.unsplash.com/photo-1555617981-dac3880eac6e?w=800"
+      ],
+      "description": "16-core beast with 5.7 GHz boost and Zen 4 architecture for ultimate performance.",
+      "specs": {
+        "Cores": "16",
+        "Threads": "32",
+        "Base Clock": "4.5 GHz",
+        "Boost Clock": "5.7 GHz",
+        "Cache": "80MB",
+        "TDP": "170W"
+      },
+      "features": ["Unlocked", "DDR5 Support", "PCIe 5.0", "5nm Process"],
+      "featured": true
+    },
+    {
+      "id": "cpu-003",
+      "name": "Intel Core i7-14700K",
+      "category": "cpu",
+      "brand": "Intel",
+      "price": 399.99,
+      "rating": 4.7,
+      "reviews": 542,
+      "stock": 36,
+      "image": "https://images.unsplash.com/photo-1555617981-dac3880eac6e?w=800",
+      "images": [
+        "https://images.unsplash.com/photo-1555617981-dac3880eac6e?w=800"
+      ],
+      "description": "20-core processor perfect for high-end gaming and multitasking.",
+      "specs": {
+        "Cores": "20 (8P + 12E)",
+        "Threads": "28",
+        "Boost Clock": "5.6 GHz",
+        "Cache": "33MB",
+        "TDP": "125W"
+      },
+      "features": ["Unlocked", "DDR5 Support", "PCIe 5.0"]
+    },
+    {
+      "id": "ram-001",
+      "name": "Corsair Dominator Platinum RGB 32GB",
+      "category": "ram",
+      "brand": "Corsair",
+      "price": 159.99,
+      "rating": 4.8,
+      "reviews": 723,
+      "stock": 67,
+      "image": "https://images.unsplash.com/photo-1562976540-1502c2145186?w=800",
+      "images": [
+        "https://images.unsplash.com/photo-1562976540-1502c2145186?w=800"
+      ],
+      "description": "Premium DDR5 RGB memory kit with exceptional performance and stunning aesthetics.",
+      "specs": {
+        "Capacity": "32GB (2x16GB)",
+        "Speed": "6000MHz",
+        "Type": "DDR5",
+        "Latency": "CL36",
+        "Voltage": "1.35V"
+      },
+      "features": ["RGB Lighting", "XMP 3.0", "Aluminum Heatspreader", "Lifetime Warranty"],
+      "featured": true
+    },
+    {
+      "id": "ram-002",
+      "name": "G.SKILL Trident Z5 RGB 64GB",
+      "category": "ram",
+      "brand": "G.SKILL",
+      "price": 279.99,
+      "originalPrice": 329.99,
+      "rating": 4.9,
+      "reviews": 456,
+      "stock": 34,
+      "image": "https://images.unsplash.com/photo-1562976540-1502c2145186?w=800",
+      "images": [
+        "https://images.unsplash.com/photo-1562976540-1502c2145186?w=800"
+      ],
+      "description": "High-capacity DDR5 kit for demanding workloads and extreme gaming.",
+      "specs": {
+        "Capacity": "64GB (2x32GB)",
+        "Speed": "6400MHz",
+        "Type": "DDR5",
+        "Latency": "CL32"
+      },
+      "features": ["RGB Lighting", "XMP 3.0", "Ultra Low Latency"],
+      "sale": true
+    },
+    {
+      "id": "motherboard-001",
+      "name": "ASUS ROG Maximus Z790 Hero",
+      "category": "motherboard",
+      "brand": "ASUS",
+      "price": 629.99,
+      "rating": 4.9,
+      "reviews": 342,
+      "stock": 18,
+      "image": "https://images.unsplash.com/photo-1588872657578-7efd1f1555ed?w=800",
+      "images": [
+        "https://images.unsplash.com/photo-1588872657578-7efd1f1555ed?w=800"
+      ],
+      "description": "Premium Z790 motherboard with PCIe 5.0, DDR5 support, and advanced cooling.",
+      "specs": {
+        "Socket": "LGA1700",
+        "Chipset": "Intel Z790",
+        "Memory": "DDR5, up to 7800MHz",
+        "PCIe": "PCIe 5.0 x16",
+        "Storage": "5x M.2, 6x SATA",
+        "Networking": "WiFi 6E, 2.5G LAN"
+      },
+      "features": ["PCIe 5.0", "WiFi 6E", "Thunderbolt 4", "AI Overclocking", "RGB Fusion"],
+      "featured": true
+    },
+    {
+      "id": "motherboard-002",
+      "name": "MSI MPG X670E Carbon WiFi",
+      "category": "motherboard",
+      "brand": "MSI",
+      "price": 449.99,
+      "rating": 4.7,
+      "reviews": 287,
+      "stock": 22,
+      "image": "https://images.unsplash.com/photo-1588872657578-7efd1f1555ed?w=800",
+      "images": [
+        "https://images.unsplash.com/photo-1588872657578-7efd1f1555ed?w=800"
+      ],
+      "description": "High-performance X670E motherboard for AMD Ryzen 7000 series processors.",
+      "specs": {
+        "Socket": "AM5",
+        "Chipset": "AMD X670E",
+        "Memory": "DDR5, up to 6400MHz",
+        "PCIe": "PCIe 5.0 x16",
+        "Storage": "4x M.2, 6x SATA"
+      },
+      "features": ["PCIe 5.0", "WiFi 6E", "USB4", "Mystic Light RGB"]
+    },
+    {
+      "id": "storage-001",
+      "name": "Samsung 990 PRO 2TB NVMe",
+      "category": "storage",
+      "brand": "Samsung",
+      "price": 179.99,
+      "originalPrice": 219.99,
+      "rating": 4.9,
+      "reviews": 1456,
+      "stock": 89,
+      "image": "https://images.unsplash.com/photo-1597872200969-2b65d56bd16b?w=800",
+      "images": [
+        "https://images.unsplash.com/photo-1597872200969-2b65d56bd16b?w=800"
+      ],
+      "description": "Blazing-fast PCIe 4.0 NVMe SSD with up to 7,450 MB/s read speeds.",
+      "specs": {
+        "Capacity": "2TB",
+        "Interface": "PCIe 4.0 x4 NVMe",
+        "Read Speed": "7,450 MB/s",
+        "Write Speed": "6,900 MB/s",
+        "Form Factor": "M.2 2280"
+      },
+      "features": ["PCIe 4.0", "DRAM Cache", "5-Year Warranty", "Low Power Consumption"],
+      "featured": true,
+      "sale": true
+    },
+    {
+      "id": "storage-002",
+      "name": "WD Black SN850X 4TB",
+      "category": "storage",
+      "brand": "Western Digital",
+      "price": 349.99,
+      "rating": 4.8,
+      "reviews": 892,
+      "stock": 45,
+      "image": "https://images.unsplash.com/photo-1597872200969-2b65d56bd16b?w=800",
+      "images": [
+        "https://images.unsplash.com/photo-1597872200969-2b65d56bd16b?w=800"
+      ],
+      "description": "High-capacity PCIe 4.0 SSD designed for gamers and content creators.",
+      "specs": {
+        "Capacity": "4TB",
+        "Interface": "PCIe 4.0 x4",
+        "Read Speed": "7,300 MB/s",
+        "Write Speed": "6,600 MB/s"
+      },
+      "features": ["Game Mode 2.0", "Heatsink Option", "5-Year Warranty"]
+    },
+    {
+      "id": "case-001",
+      "name": "Lian Li O11 Dynamic EVO",
+      "category": "case",
+      "brand": "Lian Li",
+      "price": 169.99,
+      "rating": 4.9,
+      "reviews": 1234,
+      "stock": 27,
+      "image": "https://images.unsplash.com/photo-1587202372634-32705e3bf49c?w=800",
+      "images": [
+        "https://images.unsplash.com/photo-1587202372634-32705e3bf49c?w=800"
+      ],
+      "description": "Premium mid-tower case with dual-chamber design and excellent airflow.",
+      "specs": {
+        "Type": "Mid Tower",
+        "Material": "Aluminum, Tempered Glass",
+        "Motherboard": "E-ATX, ATX, Micro-ATX, Mini-ITX",
+        "GPU Clearance": "420mm",
+        "Radiator Support": "Top: 360mm, Side: 360mm, Bottom: 360mm"
+      },
+      "features": ["Tempered Glass", "USB-C", "Modular Design", "RGB Compatible"],
+      "featured": true
+    },
+    {
+      "id": "case-002",
+      "name": "NZXT H7 Flow RGB",
+      "category": "case",
+      "brand": "NZXT",
+      "price": 129.99,
+      "originalPrice": 149.99,
+      "rating": 4.7,
+      "reviews": 678,
+      "stock": 41,
+      "image": "https://images.unsplash.com/photo-1587202372634-32705e3bf49c?w=800",
+      "images": [
+        "https://images.unsplash.com/photo-1587202372634-32705e3bf49c?w=800"
+      ],
+      "description": "High-airflow case with clean cable management and RGB fans included.",
+      "specs": {
+        "Type": "Mid Tower",
+        "Material": "Steel, Tempered Glass",
+        "Motherboard": "ATX, Micro-ATX, Mini-ITX",
+        "GPU Clearance": "400mm"
+      },
+      "features": ["High Airflow", "Cable Management", "3x RGB Fans", "USB-C"],
+      "sale": true
+    },
+    {
+      "id": "psu-001",
+      "name": "Corsair RM1000x 1000W",
+      "category": "psu",
+      "brand": "Corsair",
+      "price": 189.99,
+      "rating": 4.9,
+      "reviews": 543,
+      "stock": 56,
+      "image": "https://images.unsplash.com/photo-1609091839311-d5365f9ff1c5?w=800",
+      "images": [
+        "https://images.unsplash.com/photo-1609091839311-d5365f9ff1c5?w=800"
+      ],
+      "description": "Fully modular 80+ Gold PSU with zero RPM fan mode and premium components.",
+      "specs": {
+        "Wattage": "1000W",
+        "Efficiency": "80+ Gold",
+        "Modular": "Fully Modular",
+        "Fan Size": "135mm",
+        "Warranty": "10 Years"
+      },
+      "features": ["80+ Gold", "Zero RPM Mode", "Fully Modular", "10-Year Warranty"],
+      "featured": true
+    },
+    {
+      "id": "psu-002",
+      "name": "Seasonic PRIME TX-850 850W",
+      "category": "psu",
+      "brand": "Seasonic",
+      "price": 229.99,
+      "rating": 5.0,
+      "reviews": 321,
+      "stock": 19,
+      "image": "https://images.unsplash.com/photo-1609091839311-d5365f9ff1c5?w=800",
+      "images": [
+        "https://images.unsplash.com/photo-1609091839311-d5365f9ff1c5?w=800"
+      ],
+      "description": "Premium 80+ Titanium PSU with industry-leading efficiency.",
+      "specs": {
+        "Wattage": "850W",
+        "Efficiency": "80+ Titanium",
+        "Modular": "Fully Modular",
+        "Warranty": "12 Years"
+      },
+      "features": ["80+ Titanium", "Fanless Mode", "12-Year Warranty"]
+    },
+    {
+      "id": "cooling-001",
+      "name": "NZXT Kraken Z73 RGB",
+      "category": "cooling",
+      "brand": "NZXT",
+      "price": 279.99,
+      "rating": 4.8,
+      "reviews": 892,
+      "stock": 33,
+      "image": "https://images.unsplash.com/photo-1587202372775-e229f172b9d7?w=800",
+      "images": [
+        "https://images.unsplash.com/photo-1587202372775-e229f172b9d7?w=800"
+      ],
+      "description": "360mm AIO with customizable LCD display and high-performance cooling.",
+      "specs": {
+        "Type": "All-in-One Liquid Cooler",
+        "Radiator Size": "360mm",
+        "Fan Size": "3x 120mm",
+        "Socket Support": "LGA1700, LGA1200, AM5, AM4",
+        "Pump Speed": "800-2800 RPM"
+      },
+      "features": ["LCD Display", "RGB Lighting", "CAM Software", "Quiet Operation"],
+      "featured": true
+    },
+    {
+      "id": "cooling-002",
+      "name": "be quiet! Dark Rock Pro 5",
+      "category": "cooling",
+      "brand": "be quiet!",
+      "price": 99.99,
+      "rating": 4.9,
+      "reviews": 567,
+      "stock": 48,
+      "image": "https://images.unsplash.com/photo-1587202372775-e229f172b9d7?w=800",
+      "images": [
+        "https://images.unsplash.com/photo-1587202372775-e229f172b9d7?w=800"
+      ],
+      "description": "Premium air cooler with dual-tower design and near-silent operation.",
+      "specs": {
+        "Type": "Air Cooler",
+        "Height": "168mm",
+        "Fans": "2x 135mm",
+        "TDP": "250W"
+      },
+      "features": ["Silent Operation", "Dual Tower", "Premium Build Quality"]
+    },
+    {
+      "id": "peripheral-001",
+      "name": "Logitech G Pro X Superlight",
+      "category": "peripherals",
+      "brand": "Logitech",
+      "price": 159.99,
+      "rating": 4.9,
+      "reviews": 2134,
+      "stock": 78,
+      "image": "https://images.unsplash.com/photo-1587829741301-dc798b83add3?w=800",
+      "images": [
+        "https://images.unsplash.com/photo-1587829741301-dc798b83add3?w=800"
+      ],
+      "description": "Ultra-lightweight wireless gaming mouse under 63 grams with HERO 25K sensor.",
+      "specs": {
+        "Type": "Wireless Gaming Mouse",
+        "Weight": "63g",
+        "Sensor": "HERO 25K",
+        "DPI": "100-25,600",
+        "Battery": "70 hours"
+      },
+      "features": ["Ultra Lightweight", "HERO 25K Sensor", "Wireless", "70-Hour Battery"],
+      "featured": true
+    },
+    {
+      "id": "peripheral-002",
+      "name": "Corsair K100 RGB Mechanical",
+      "category": "peripherals",
+      "brand": "Corsair",
+      "price": 229.99,
+      "originalPrice": 269.99,
+      "rating": 4.8,
+      "reviews": 1456,
+      "stock": 42,
+      "image": "https://images.unsplash.com/photo-1587829741301-dc798b83add3?w=800",
+      "images": [
+        "https://images.unsplash.com/photo-1587829741301-dc798b83add3?w=800"
+      ],
+      "description": "Premium mechanical keyboard with per-key RGB and dedicated media controls.",
+      "specs": {
+        "Type": "Mechanical Gaming Keyboard",
+        "Switches": "Cherry MX Speed",
+        "Backlighting": "Per-Key RGB",
+        "Connectivity": "USB-C"
+      },
+      "features": ["Cherry MX Switches", "Per-Key RGB", "Media Controls", "USB Passthrough"],
+      "sale": true
+    },
+    {
+      "id": "monitor-001",
+      "name": "ASUS ROG Swift PG27AQDM",
+      "category": "monitor",
+      "brand": "ASUS",
+      "price": 899.99,
+      "rating": 4.9,
+      "reviews": 456,
+      "stock": 24,
+      "image": "https://images.unsplash.com/photo-1527443224154-c4a3942d3acf?w=800",
+      "images": [
+        "https://images.unsplash.com/photo-1527443224154-c4a3942d3acf?w=800"
+      ],
+      "description": "27-inch 1440p OLED gaming monitor with 240Hz refresh rate and 0.03ms response time.",
+      "specs": {
+        "Size": "27 inches",
+        "Resolution": "2560x1440 (QHD)",
+        "Panel": "OLED",
+        "Refresh Rate": "240Hz",
+        "Response Time": "0.03ms",
+        "HDR": "HDR10, DisplayHDR True Black 400"
+      },
+      "features": ["OLED Panel", "240Hz", "G-SYNC Compatible", "HDR", "Ergonomic Stand"],
+      "featured": true
+    },
+    {
+      "id": "monitor-002",
+      "name": "Samsung Odyssey G9",
+      "category": "monitor",
+      "brand": "Samsung",
+      "price": 1299.99,
+      "originalPrice": 1499.99,
+      "rating": 4.8,
+      "reviews": 678,
+      "stock": 12,
+      "image": "https://images.unsplash.com/photo-1527443224154-c4a3942d3acf?w=800",
+      "images": [
+        "https://images.unsplash.com/photo-1527443224154-c4a3942d3acf?w=800"
+      ],
+      "description": "49-inch super ultrawide curved gaming monitor with 240Hz and Quantum Dot technology.",
+      "specs": {
+        "Size": "49 inches",
+        "Resolution": "5120x1440 (Dual QHD)",
+        "Panel": "VA Quantum Dot",
+        "Refresh Rate": "240Hz",
+        "Curve": "1000R",
+        "HDR": "HDR1000"
+      },
+      "features": ["Super Ultrawide", "240Hz", "1000R Curve", "Quantum Dot", "G-SYNC Compatible"],
+      "sale": true
+    }
+  ]
+}
