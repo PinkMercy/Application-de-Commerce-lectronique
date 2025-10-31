@@ -1,0 +1,202 @@
+[
+  {
+    "id": 1,
+    "name": "Smartphone Galaxy X15",
+    "category": "Électronique",
+    "price": 799.99,
+    "rating": 4.6,
+    "stock": 25,
+    "description": "Smartphone performant avec écran AMOLED 6.7 pouces, 128 Go de stockage et appareil photo 108 MP.",
+    "images": ["/images/products/galaxy-x15-1.jpg", "/images/products/galaxy-x15-2.jpg", "/images/products/galaxy-x15-3.jpg"]
+  },
+  {
+    "id": 2,
+    "name": "Ordinateur Portable ZenBook 14",
+    "category": "Informatique",
+    "price": 1199.99,
+    "rating": 4.8,
+    "stock": 10,
+    "description": "Laptop ultra-fin avec processeur Intel i7, 16 Go RAM et SSD 512 Go.",
+    "images": ["/images/products/zenbook-14-1.jpg", "/images/products/zenbook-14-2.jpg", "/images/products/zenbook-14-3.jpg"]
+  },
+  {
+    "id": 3,
+    "name": "Montre Connectée FitPro X",
+    "category": "Accessoires",
+    "price": 149.99,
+    "rating": 4.3,
+    "stock": 40,
+    "description": "Montre connectée avec capteur cardiaque, GPS intégré et autonomie de 7 jours.",
+    "images": ["/images/products/fitpro-x-1.jpg", "/images/products/fitpro-x-2.jpg", "/images/products/fitpro-x-3.jpg"]
+  },
+  {
+    "id": 4,
+    "name": "Casque Audio BassBoost 500",
+    "category": "Audio",
+    "price": 89.99,
+    "rating": 4.1,
+    "stock": 60,
+    "description": "Casque sans fil Bluetooth avec réduction de bruit active et autonomie de 30 heures.",
+    "images": ["/images/products/bassboost-500-1.jpg", "/images/products/bassboost-500-2.jpg", "/images/products/bassboost-500-3.jpg"]
+  },
+  {
+    "id": 5,
+    "name": "Chaise de Bureau Ergonomique ProSeat",
+    "category": "Maison",
+    "price": 219.99,
+    "rating": 4.7,
+    "stock": 15,
+    "description": "Chaise de bureau ajustable en maille respirante, avec support lombaire intégré.",
+    "images": ["/images/products/proseat-1.jpg", "/images/products/proseat-2.jpg", "/images/products/proseat-3.jpg"]
+  },
+  {
+    "id": 6,
+    "name": "Caméra de Sécurité WiFi 360°",
+    "category": "Électronique",
+    "price": 99.99,
+    "rating": 4.2,
+    "stock": 35,
+    "description": "Caméra connectée Full HD avec vision nocturne et détection de mouvement.",
+    "images": ["/images/products/camera-360-1.jpg", "/images/products/camera-360-2.jpg", "/images/products/camera-360-3.jpg"]
+  },
+  {
+    "id": 7,
+    "name": "Enceinte Bluetooth SoundBox 2",
+    "category": "Audio",
+    "price": 59.99,
+    "rating": 4.4,
+    "stock": 80,
+    "description": "Enceinte portable étanche avec son stéréo 20W et autonomie de 12 heures.",
+    "images": ["/images/products/soundbox-2-1.jpg", "/images/products/soundbox-2-2.jpg", "/images/products/soundbox-2-3.jpg"]
+  },
+  {
+    "id": 8,
+    "name": "Clavier Mécanique RGB K70",
+    "category": "Informatique",
+    "price": 139.99,
+    "rating": 4.5,
+    "stock": 50,
+    "description": "Clavier gamer mécanique avec rétroéclairage RGB et switches rapides.",
+    "images": ["/images/products/k70-1.jpg", "/images/products/k70-2.jpg", "/images/products/k70-3.jpg"]
+  },
+  {
+    "id": 9,
+    "name": "Écouteurs Sans Fil AirPods Style",
+    "category": "Audio",
+    "price": 79.99,
+    "rating": 4.0,
+    "stock": 90,
+    "description": "Écouteurs Bluetooth avec boîtier de recharge sans fil et suppression du bruit.",
+    "images": ["/images/products/airpods-style-1.jpg", "/images/products/airpods-style-2.jpg", "/images/products/airpods-style-3.jpg"]
+  },
+  {
+    "id": 10,
+    "name": "Lampe LED de Bureau Intelligente",
+    "category": "Maison",
+    "price": 49.99,
+    "rating": 4.3,
+    "stock": 45,
+    "description": "Lampe LED à intensité réglable et port USB intégré.",
+    "images": ["/images/products/lampe-led-1.jpg", "/images/products/lampe-led-2.jpg", "/images/products/lampe-led-3.jpg"]
+  },
+  {
+    "id": 11,
+    "name": "Tapis de Souris XXL RGB",
+    "category": "Informatique",
+    "price": 34.99,
+    "rating": 4.6,
+    "stock": 70,
+    "description": "Tapis gamer avec rétroéclairage RGB et surface antidérapante.",
+    "images": ["/images/products/mousepad-rgb-1.jpg", "/images/products/mousepad-rgb-2.jpg"]
+  },
+  {
+    "id": 12,
+    "name": "Manette Sans Fil DualPlay",
+    "category": "Gaming",
+    "price": 59.99,
+    "rating": 4.5,
+    "stock": 55,
+    "description": "Manette universelle compatible PC, Android et consoles avec retour haptique.",
+    "images": ["/images/products/dualplay-1.jpg", "/images/products/dualplay-2.jpg"]
+  },
+  {
+    "id": 13,
+    "name": "Lisseur Cheveux SilkPro 3000",
+    "category": "Beauté",
+    "price": 89.99,
+    "rating": 4.4,
+    "stock": 40,
+    "description": "Fer à lisser professionnel avec plaques en céramique et contrôle de température.",
+    "images": ["/images/products/silkpro-1.jpg", "/images/products/silkpro-2.jpg"]
+  },
+  {
+    "id": 14,
+    "name": "Sneakers AirMotion Blanc",
+    "category": "Mode",
+    "price": 119.99,
+    "rating": 4.7,
+    "stock": 30,
+    "description": "Chaussures de sport légères et respirantes avec semelle amortissante.",
+    "images": ["/images/products/airmotion-1.jpg", "/images/products/airmotion-2.jpg"]
+  },
+  {
+    "id": 15,
+    "name": "Sac à Dos CityPack 25L",
+    "category": "Accessoires",
+    "price": 69.99,
+    "rating": 4.5,
+    "stock": 60,
+    "description": "Sac à dos imperméable avec compartiment pour ordinateur portable 15 pouces.",
+    "images": ["/images/products/citypack-1.jpg", "/images/products/citypack-2.jpg"]
+  },
+  {
+    "id": 16,
+    "name": "Machine à Café Barista Mini",
+    "category": "Maison",
+    "price": 149.99,
+    "rating": 4.8,
+    "stock": 25,
+    "description": "Machine à espresso compacte avec mousseur à lait intégré.",
+    "images": ["/images/products/barista-mini-1.jpg", "/images/products/barista-mini-2.jpg"]
+  },
+  {
+    "id": 17,
+    "name": "Moniteur Gaming 27'' 2K",
+    "category": "Informatique",
+    "price": 299.99,
+    "rating": 4.9,
+    "stock": 20,
+    "description": "Écran 27 pouces QHD avec taux de rafraîchissement 165Hz et 1ms de latence.",
+    "images": ["/images/products/monitor-27q-1.jpg", "/images/products/monitor-27q-2.jpg"]
+  },
+  {
+    "id": 18,
+    "name": "Tablette Graphique ArtPad S6",
+    "category": "Informatique",
+    "price": 159.99,
+    "rating": 4.6,
+    "stock": 18,
+    "description": "Tablette graphique avec stylet sensible à la pression (8192 niveaux).",
+    "images": ["/images/products/artpad-s6-1.jpg", "/images/products/artpad-s6-2.jpg"]
+  },
+  {
+    "id": 19,
+    "name": "Drone Aérien SkyView X8",
+    "category": "Électronique",
+    "price": 349.99,
+    "rating": 4.5,
+    "stock": 12,
+    "description": "Drone caméra 4K avec stabilisation gyroscopique et autonomie de 40 minutes.",
+    "images": ["/images/products/skyview-x8-1.jpg", "/images/products/skyview-x8-2.jpg"]
+  },
+  {
+    "id": 20,
+    "name": "Brosse Nettoyante Visage GlowSkin",
+    "category": "Beauté",
+    "price": 39.99,
+    "rating": 4.2,
+    "stock": 70,
+    "description": "Brosse électrique waterproof pour nettoyage en profondeur du visage.",
+    "images": ["/images/products/glowskin-1.jpg", "/images/products/glowskin-2.jpg"]
+  }
+]
