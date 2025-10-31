@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
+import SearchBar from './SearchBar';
 
 interface NavbarProps {
   cartCount: number;
@@ -8,7 +9,6 @@ interface NavbarProps {
 
 function Navbar({ cartCount, onCartClick }: NavbarProps) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [searchQuery, setSearchQuery] = useState('');
 
   return (
     <nav className="sticky top-0 z-50 glass border-b border-white/10">
@@ -17,45 +17,16 @@ function Navbar({ cartCount, onCartClick }: NavbarProps) {
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-3 group">
             <div className="w-10 h-10 bg-gradient-to-br from-purple-500 to-cyan-500 rounded-lg flex items-center justify-center transform group-hover:rotate-12 transition-transform">
-              <svg
-                className="w-6 h-6 text-white"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                {/* Filled center */}
-                <circle cx="12" cy="12" r="3.5" fill="currentColor" stroke="currentColor" strokeWidth={0.5} />
-                {/* Filled rays (sharp triangles) */}
-                <path d="M12 1.6 L13.6 6 L10.4 6 Z" fill="currentColor" />
-                <path d="M19 3.6 L15.2 7.4 L14.1 6.2 Z" fill="currentColor" />
-                <path d="M22.4 12 L17.6 13.6 L17.6 10.4 Z" fill="currentColor" />
-                <path d="M19 20.4 L15.2 16.6 L14.1 17.8 Z" fill="currentColor" />
-                <path d="M12 22.4 L10.4 18 L13.6 18 Z" fill="currentColor" />
-                <path d="M5 20.4 L8.8 16.6 L9.9 17.8 Z" fill="currentColor" />
-                <path d="M1.6 12 L6.4 10.4 L6.4 13.6 Z" fill="currentColor" />
-                <path d="M5 3.6 L8.8 7.4 L9.9 6.2 Z" fill="currentColor" />
+              <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
               </svg>
-
-
             </div>
-            <span className="text-xl font-bold text-gradient hidden sm:block">SunTech</span>
+            <span className="text-xl font-bold text-gradient hidden sm:block">TechVault</span>
           </Link>
 
           {/* Search Bar - Desktop */}
           <div className="hidden md:flex flex-1 max-w-md mx-8">
-            <div className="relative w-full">
-              <input
-                type="text"
-                placeholder="Search products..."
-                value={searchQuery}
-                onChange={(e) => setSearchQuery(e.target.value)}
-                className="input w-full pl-10"
-              />
-              <svg className="w-5 h-5 text-gray-400 absolute left-3 top-1/2 -translate-y-1/2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-              </svg>
-            </div>
+            <SearchBar />
           </div>
 
           {/* Navigation Links - Desktop */}
@@ -118,18 +89,7 @@ function Navbar({ cartCount, onCartClick }: NavbarProps) {
         {isMenuOpen && (
           <div className="md:hidden py-4 space-y-4 border-t border-white/10">
             {/* Mobile Search */}
-            <div className="relative">
-              <input
-                type="text"
-                placeholder="Search products..."
-                value={searchQuery}
-                onChange={(e) => setSearchQuery(e.target.value)}
-                className="input w-full pl-10"
-              />
-              <svg className="w-5 h-5 text-gray-400 absolute left-3 top-1/2 -translate-y-1/2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-              </svg>
-            </div>
+            <SearchBar isMobile={true} />
 
             {/* Mobile Navigation Links */}
             <Link to="/" className="block text-gray-300 hover:text-purple-400 transition-colors font-medium py-2">

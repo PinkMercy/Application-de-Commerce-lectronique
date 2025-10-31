@@ -3,7 +3,7 @@ import { useState, useMemo } from 'react';
 import productsData from '../data/products.json';
 
 interface ProductsProps {
-  addToCart: (product: any) => void;
+  addToCart: (product: unknown) => void;
 }
 
 function Products({ addToCart }: ProductsProps) {
