@@ -10,7 +10,61 @@ function Products({ addToCart }: ProductsProps) {
   const { category } = useParams();
   const [selectedCategory, setSelectedCategory] = useState(category || 'all');
   const [priceRange, setPriceRange] = useState('all');
+  const [customMinPrice, setCustomMinPrice] = useState('');
+  const [customMaxPrice, setCustomMaxPrice] = useState('');
   const [sortBy, setSortBy] = useState('featured');
+
+  // Helper function to render stars based on rating
+  const renderStars = (rating: number) => {
+    const stars = [];
+    const fullStars = Math.floor(rating);
+    const decimal = rating % 1;
+    
+    // Full stars
+    for (let i = 0; i < fullStars; i++) {
+      stars.push(
+        <span key={`full-${i}`} className="text-yellow-400">★</span>
+      );
+    }
+    
+    // Partial star based on decimal value
+    if (decimal > 0) {
+      let fillPercentage = 0;
+      
+      if (decimal <= 0.25) {
+        fillPercentage = 25;
+      } else if (decimal <= 0.5) {
+        fillPercentage = 50;
+      } else if (decimal <= 0.75) {
+        fillPercentage = 75;
+      } else {
+        fillPercentage = 100;
+      }
+      
+      stars.push(
+        <span key="partial" className="relative inline-block">
+          <span className="text-gray-600">★</span>
+          <span 
+            className="absolute left-0 top-0 overflow-hidden text-yellow-400"
+            style={{ width: `${fillPercentage}%` }}
+          >
+            ★
+          </span>
+        </span>
+      );
+    }
+    
+    // Empty stars to complete 5 stars
+    const totalStarsShown = fullStars + (decimal > 0 ? 1 : 0);
+    const emptyStars = 5 - totalStarsShown;
+    for (let i = 0; i < emptyStars; i++) {
+      stars.push(
+        <span key={`empty-${i}`} className="text-gray-600">★</span>
+      );
+    }
+    
+    return stars;
+  };
 
   const filteredProducts = useMemo(() => {
     let filtered = productsData.products;
@@ -20,10 +74,17 @@ function Products({ addToCart }: ProductsProps) {
       filtered = filtered.filter(p => p.category === selectedCategory);
     }
 
-    // Filter by price
-    if (priceRange !== 'all') {
+    // Filter by price range (preset)
+    if (priceRange !== 'all' && priceRange !== 'custom') {
       const [min, max] = priceRange.split('-').map(Number);
       filtered = filtered.filter(p => p.price >= min && (max ? p.price <= max : true));
+    }
+
+    // Filter by custom price range
+    if (priceRange === 'custom') {
+      const min = customMinPrice ? parseFloat(customMinPrice) : 0;
+      const max = customMaxPrice ? parseFloat(customMaxPrice) : Infinity;
+      filtered = filtered.filter(p => p.price >= min && p.price <= max);
     }
 
     // Sort
@@ -33,10 +94,16 @@ function Products({ addToCart }: ProductsProps) {
       filtered = [...filtered].sort((a, b) => b.price - a.price);
     } else if (sortBy === 'rating') {
       filtered = [...filtered].sort((a, b) => b.rating - a.rating);
+    } else if (sortBy === 'newest') {
+      filtered = [...filtered].sort((a, b) => {
+        const dateA = new Date(a.createdAt);
+        const dateB = new Date(b.createdAt);
+        return dateB.getTime() - dateA.getTime();
+      });
     }
 
     return filtered;
-  }, [selectedCategory, priceRange, sortBy]);
+  }, [selectedCategory, priceRange, customMinPrice, customMaxPrice, sortBy]);
 
   return (
     <div className="min-h-screen py-8">
@@ -81,7 +148,7 @@ function Products({ addToCart }: ProductsProps) {
             <div className="card">
               <h3 className="font-bold text-lg mb-4">Price Range</h3>
               <div className="space-y-2">
-                {['all', '0-200', '200-500', '500-1000', '1000'].map((range) => (
+                {['all', '0-200', '200-500', '500-1000', '1000', 'custom'].map((range) => (
                   <button
                     key={range}
                     onClick={() => setPriceRange(range)}
@@ -89,10 +156,38 @@ function Products({ addToCart }: ProductsProps) {
                       priceRange === range ? 'bg-purple-500 text-white' : 'hover:bg-white/10'
                     }`}
                   >
-                    {range === 'all' ? 'All Prices' : range === '1000' ? '1 TND000+' : `$${range.replace('-', ' - $')}`}
+                    {range === 'all' ? 'All Prices' : range === '1000' ? '$1000+' : range === 'custom' ? 'Custom Range' : `$${range.replace('-', ' - $')}`}
                   </button>
                 ))}
               </div>
+              
+              {/* Custom Price Range Inputs */}
+              {priceRange === 'custom' && (
+                <div className="mt-4 pt-4 border-t border-white/10 space-y-3">
+                  <div>
+                    <label className="text-sm text-gray-400 mb-1 block">Min Price ($)</label>
+                    <input
+                      type="number"
+                      value={customMinPrice}
+                      onChange={(e) => setCustomMinPrice(e.target.value)}
+                      placeholder="0"
+                      className="input w-full"
+                      min="0"
+                    />
+                  </div>
+                  <div>
+                    <label className="text-sm text-gray-400 mb-1 block">Max Price ($)</label>
+                    <input
+                      type="number"
+                      value={customMaxPrice}
+                      onChange={(e) => setCustomMaxPrice(e.target.value)}
+                      placeholder="No limit"
+                      className="input w-full"
+                      min="0"
+                    />
+                  </div>
+                </div>
+              )}
             </div>
           </div>
 
@@ -106,6 +201,7 @@ function Products({ addToCart }: ProductsProps) {
                 className="input"
               >
                 <option value="featured">Featured</option>
+                <option value="newest">Newest</option>
                 <option value="price-low">Price: Low to High</option>
                 <option value="price-high">Price: High to Low</option>
                 <option value="rating">Top Rated</option>
@@ -144,9 +240,9 @@ function Products({ addToCart }: ProductsProps) {
 
                     <div className="flex items-center gap-2 text-sm">
                       <div className="flex text-yellow-400">
-                        {'★'.repeat(Math.floor(product.rating))}
+                        {renderStars(product.rating)}
                       </div>
-                      <span className="text-gray-400">({product.reviews})</span>
+                      <span className="text-gray-400">{product.rating} ({product.reviews})</span>
                     </div>
 
                     <div className="flex items-center justify-between pt-2">
