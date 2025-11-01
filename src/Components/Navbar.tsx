@@ -17,11 +17,27 @@ function Navbar({ cartCount, onCartClick }: NavbarProps) {
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-3 group">
             <div className="w-10 h-10 bg-gradient-to-br from-purple-500 to-cyan-500 rounded-lg flex items-center justify-center transform group-hover:rotate-12 transition-transform">
-              <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+              <svg
+                className="w-6 h-6 text-white"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                {/* Filled center */}
+                <circle cx="12" cy="12" r="3.5" fill="currentColor" stroke="currentColor" strokeWidth={0.5} />
+                {/* Filled rays (sharp triangles) */}
+                <path d="M12 1.6 L13.6 6 L10.4 6 Z" fill="currentColor" />
+                <path d="M19 3.6 L15.2 7.4 L14.1 6.2 Z" fill="currentColor" />
+                <path d="M22.4 12 L17.6 13.6 L17.6 10.4 Z" fill="currentColor" />
+                <path d="M19 20.4 L15.2 16.6 L14.1 17.8 Z" fill="currentColor" />
+                <path d="M12 22.4 L10.4 18 L13.6 18 Z" fill="currentColor" />
+                <path d="M5 20.4 L8.8 16.6 L9.9 17.8 Z" fill="currentColor" />
+                <path d="M1.6 12 L6.4 10.4 L6.4 13.6 Z" fill="currentColor" />
+                <path d="M5 3.6 L8.8 7.4 L9.9 6.2 Z" fill="currentColor" />
               </svg>
             </div>
-            <span className="text-xl font-bold text-gradient hidden sm:block">TechVault</span>
+            <span className="text-xl font-bold text-gradient hidden sm:block">SunTech</span>
           </Link>
 
           {/* Search Bar - Desktop */}

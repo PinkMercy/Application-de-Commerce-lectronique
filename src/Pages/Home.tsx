@@ -66,21 +66,7 @@ function Home({ addToCart }: HomeProps) {
                 </Link>
               </div>
 
-              {/* Stats */}
-              <div className="grid grid-cols-3 gap-8 pt-8">
-                <div>
-                  <div className="text-3xl font-bold text-gradient">500+</div>
-                  <div className="text-gray-400 text-sm">Products</div>
-                </div>
-                <div>
-                  <div className="text-3xl font-bold text-gradient">50K+</div>
-                  <div className="text-gray-400 text-sm">Happy Customers</div>
-                </div>
-                <div>
-                  <div className="text-3xl font-bold text-gradient">4.9★</div>
-                  <div className="text-gray-400 text-sm">Rating</div>
-                </div>
-              </div>
+             
             </div>
 
             {/* Product Slider */}
