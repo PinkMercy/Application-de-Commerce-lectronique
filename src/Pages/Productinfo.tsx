@@ -22,18 +22,18 @@ function Productinfo({ addToCart }: ProductinfoProps) {
     const stars = [];
     const fullStars = Math.floor(rating);
     const decimal = rating % 1;
-    
+
     // Full stars
     for (let i = 0; i < fullStars; i++) {
       stars.push(
         <span key={`full-${i}`} className="text-yellow-400">★</span>
       );
     }
-    
+
     // Partial star based on decimal value
     if (decimal > 0) {
       let fillPercentage = 0;
-      
+
       if (decimal <= 0.25) {
         fillPercentage = 25;
       } else if (decimal <= 0.5) {
@@ -43,11 +43,11 @@ function Productinfo({ addToCart }: ProductinfoProps) {
       } else {
         fillPercentage = 100;
       }
-      
+
       stars.push(
         <span key="partial" className="relative inline-block">
           <span className="text-gray-600">★</span>
-          <span 
+          <span
             className="absolute left-0 top-0 overflow-hidden text-yellow-400"
             style={{ width: `${fillPercentage}%` }}
           >
@@ -56,7 +56,7 @@ function Productinfo({ addToCart }: ProductinfoProps) {
         </span>
       );
     }
-    
+
     // Empty stars to complete 5 stars
     const totalStarsShown = fullStars + (decimal > 0 ? 1 : 0);
     const emptyStars = 5 - totalStarsShown;
@@ -65,7 +65,7 @@ function Productinfo({ addToCart }: ProductinfoProps) {
         <span key={`empty-${i}`} className="text-gray-600">★</span>
       );
     }
-    
+
     return stars;
   };
 
@@ -128,7 +128,7 @@ function Productinfo({ addToCart }: ProductinfoProps) {
             <div>
               <p className="text-gray-400 mb-2">{product.brand}</p>
               <h1 className="text-4xl font-bold mb-4">{product.name}</h1>
-              
+
               <div className="flex items-center gap-4 mb-4">
                 <div className="flex items-center gap-2">
                   <div className="flex text-lg">
@@ -163,10 +163,22 @@ function Productinfo({ addToCart }: ProductinfoProps) {
               </div>
 
               <div className="flex items-center gap-2 text-sm mb-6">
-                <span className={`badge ${product.stock > 10 ? 'badge-success' : 'badge-warning'}`}>
-                  {product.stock > 10 ? 'In Stock' : `Only ${product.stock} left`}
+                <span
+                  className={`badge ${product.stock === 0
+                      ? 'badge-danger'
+                      : product.stock > 10
+                        ? 'badge-success'
+                        : 'badge-warning'
+                    }`}
+                >
+                  {product.stock === 0
+                    ? 'Hors stock'
+                    : product.stock > 10
+                      ? 'In Stock'
+                      : `Only ${product.stock} left`}
                 </span>
               </div>
+
 
               {/* Quantity */}
               <div className="flex items-center gap-4 mb-6">

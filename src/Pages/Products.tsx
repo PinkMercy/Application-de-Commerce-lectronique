@@ -19,18 +19,18 @@ function Products({ addToCart }: ProductsProps) {
     const stars = [];
     const fullStars = Math.floor(rating);
     const decimal = rating % 1;
-    
+
     // Full stars
     for (let i = 0; i < fullStars; i++) {
       stars.push(
         <span key={`full-${i}`} className="text-yellow-400">★</span>
       );
     }
-    
+
     // Partial star based on decimal value
     if (decimal > 0) {
       let fillPercentage = 0;
-      
+
       if (decimal <= 0.25) {
         fillPercentage = 25;
       } else if (decimal <= 0.5) {
@@ -40,11 +40,11 @@ function Products({ addToCart }: ProductsProps) {
       } else {
         fillPercentage = 100;
       }
-      
+
       stars.push(
         <span key="partial" className="relative inline-block">
           <span className="text-gray-600">★</span>
-          <span 
+          <span
             className="absolute left-0 top-0 overflow-hidden text-yellow-400"
             style={{ width: `${fillPercentage}%` }}
           >
@@ -53,7 +53,7 @@ function Products({ addToCart }: ProductsProps) {
         </span>
       );
     }
-    
+
     // Empty stars to complete 5 stars
     const totalStarsShown = fullStars + (decimal > 0 ? 1 : 0);
     const emptyStars = 5 - totalStarsShown;
@@ -62,7 +62,7 @@ function Products({ addToCart }: ProductsProps) {
         <span key={`empty-${i}`} className="text-gray-600">★</span>
       );
     }
-    
+
     return stars;
   };
 
@@ -124,9 +124,8 @@ function Products({ addToCart }: ProductsProps) {
               <div className="space-y-2">
                 <button
                   onClick={() => setSelectedCategory('all')}
-                  className={`w-full text-left px-4 py-2 rounded-lg transition-colors ${
-                    selectedCategory === 'all' ? 'bg-purple-500 text-white' : 'hover:bg-white/10'
-                  }`}
+                  className={`w-full text-left px-4 py-2 rounded-lg transition-colors ${selectedCategory === 'all' ? 'bg-purple-500 text-white' : 'hover:bg-white/10'
+                    }`}
                 >
                   All Products
                 </button>
@@ -134,9 +133,8 @@ function Products({ addToCart }: ProductsProps) {
                   <button
                     key={cat.id}
                     onClick={() => setSelectedCategory(cat.id)}
-                    className={`w-full text-left px-4 py-2 rounded-lg transition-colors flex items-center gap-2 ${
-                      selectedCategory === cat.id ? 'bg-purple-500 text-white' : 'hover:bg-white/10'
-                    }`}
+                    className={`w-full text-left px-4 py-2 rounded-lg transition-colors flex items-center gap-2 ${selectedCategory === cat.id ? 'bg-purple-500 text-white' : 'hover:bg-white/10'
+                      }`}
                   >
                     <span>{cat.icon}</span>
                     <span>{cat.name}</span>
@@ -152,15 +150,14 @@ function Products({ addToCart }: ProductsProps) {
                   <button
                     key={range}
                     onClick={() => setPriceRange(range)}
-                    className={`w-full text-left px-4 py-2 rounded-lg transition-colors ${
-                      priceRange === range ? 'bg-purple-500 text-white' : 'hover:bg-white/10'
-                    }`}
+                    className={`w-full text-left px-4 py-2 rounded-lg transition-colors ${priceRange === range ? 'bg-purple-500 text-white' : 'hover:bg-white/10'
+                      }`}
                   >
                     {range === 'all' ? 'All Prices' : range === '1000' ? '$1000+' : range === 'custom' ? 'Custom Range' : `$${range.replace('-', ' - $')}`}
                   </button>
                 ))}
               </div>
-              
+
               {/* Custom Price Range Inputs */}
               {priceRange === 'custom' && (
                 <div className="mt-4 pt-4 border-t border-white/10 space-y-3">
@@ -225,7 +222,7 @@ function Products({ addToCart }: ProductsProps) {
                     )}
                     {product.stock < 20 && (
                       <span className="absolute top-4 left-4 badge badge-danger">
-                        Only {product.stock} left
+                        {product.stock === 0 ? "Hors stock" : `Only ${product.stock} left`}
                       </span>
                     )}
                   </div>
