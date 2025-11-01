@@ -3,7 +3,7 @@ import { useState } from 'react';
 import productsData from '../data/products.json';
 
 interface ProductinfoProps {
-  addToCart: (product: any) => void;
+  addToCart: (product: unknown) => void;
 }
 
 function Productinfo({ addToCart }: ProductinfoProps) {
@@ -11,6 +11,63 @@ function Productinfo({ addToCart }: ProductinfoProps) {
   const product = productsData.products.find(p => p.id === id);
   const [selectedImage, setSelectedImage] = useState(0);
   const [quantity, setQuantity] = useState(1);
+
+  // Get similar products (same category, exclude current product)
+  const similarProducts = productsData.products
+    .filter(p => p.category === product?.category && p.id !== id)
+    .slice(0, 4);
+
+  // Helper function to render stars based on rating
+  const renderStars = (rating: number) => {
+    const stars = [];
+    const fullStars = Math.floor(rating);
+    const decimal = rating % 1;
+    
+    // Full stars
+    for (let i = 0; i < fullStars; i++) {
+      stars.push(
+        <span key={`full-${i}`} className="text-yellow-400">★</span>
+      );
+    }
+    
+    // Partial star based on decimal value
+    if (decimal > 0) {
+      let fillPercentage = 0;
+      
+      if (decimal <= 0.25) {
+        fillPercentage = 25;
+      } else if (decimal <= 0.5) {
+        fillPercentage = 50;
+      } else if (decimal <= 0.75) {
+        fillPercentage = 75;
+      } else {
+        fillPercentage = 100;
+      }
+      
+      stars.push(
+        <span key="partial" className="relative inline-block">
+          <span className="text-gray-600">★</span>
+          <span 
+            className="absolute left-0 top-0 overflow-hidden text-yellow-400"
+            style={{ width: `${fillPercentage}%` }}
+          >
+            ★
+          </span>
+        </span>
+      );
+    }
+    
+    // Empty stars to complete 5 stars
+    const totalStarsShown = fullStars + (decimal > 0 ? 1 : 0);
+    const emptyStars = 5 - totalStarsShown;
+    for (let i = 0; i < emptyStars; i++) {
+      stars.push(
+        <span key={`empty-${i}`} className="text-gray-600">★</span>
+      );
+    }
+    
+    return stars;
+  };
 
   if (!product) {
     return (
@@ -74,10 +131,10 @@ function Productinfo({ addToCart }: ProductinfoProps) {
               
               <div className="flex items-center gap-4 mb-4">
                 <div className="flex items-center gap-2">
-                  <div className="flex text-yellow-400 text-lg">
-                    {'★'.repeat(Math.floor(product.rating))}
+                  <div className="flex text-lg">
+                    {renderStars(product.rating)}
                   </div>
-                  <span className="text-gray-400">({product.reviews} reviews)</span>
+                  <span className="text-gray-400">{product.rating} ({product.reviews} reviews)</span>
                 </div>
                 {product.sale && (
                   <span className="badge badge-warning">ON SALE</span>
@@ -176,6 +233,72 @@ function Productinfo({ addToCart }: ProductinfoProps) {
             )}
           </div>
         </div>
+
+        {/* Similar Products */}
+        {similarProducts.length > 0 && (
+          <div className="mt-16">
+            <h2 className="text-3xl font-bold mb-8">Similar Products</h2>
+            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+              {similarProducts.map((similarProduct) => (
+                <Link
+                  key={similarProduct.id}
+                  to={`/product/${similarProduct.id}`}
+                  className="card card-hover group"
+                >
+                  <div className="relative overflow-hidden rounded-t-xl">
+                    <img
+                      src={similarProduct.image}
+                      alt={similarProduct.name}
+                      className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-500"
+                    />
+                    {similarProduct.sale && (
+                      <span className="absolute top-4 right-4 badge badge-warning">
+                        SALE
+                      </span>
+                    )}
+                  </div>
+
+                  <div className="p-6 space-y-3">
+                    <div>
+                      <p className="text-sm text-gray-400 mb-1">{similarProduct.brand}</p>
+                      <h3 className="font-semibold text-white line-clamp-2">{similarProduct.name}</h3>
+                    </div>
+
+                    <div className="flex items-center gap-2 text-sm">
+                      <div className="flex text-yellow-400">
+                        {renderStars(similarProduct.rating)}
+                      </div>
+                      <span className="text-gray-400">{similarProduct.rating}</span>
+                    </div>
+
+                    <div className="flex items-center justify-between pt-2">
+                      <div>
+                        {similarProduct.originalPrice && (
+                          <span className="text-gray-500 line-through text-sm mr-2">
+                            ${similarProduct.originalPrice}
+                          </span>
+                        )}
+                        <span className="text-2xl font-bold text-gradient">
+                          ${similarProduct.price}
+                        </span>
+                      </div>
+                    </div>
+
+                    <button
+                      onClick={(e) => {
+                        e.preventDefault();
+                        addToCart(similarProduct);
+                      }}
+                      className="btn btn-primary w-full text-sm"
+                    >
+                      Add to Cart
+                    </button>
+                  </div>
+                </Link>
+              ))}
+            </div>
+          </div>
+        )}
       </div>
     </div>
   );
