@@ -5,70 +5,70 @@
       "name": "Graphics Cards",
       "description": "High-performance GPUs for gaming and creative work",
       "image": "https://images.unsplash.com/photo-1591488320449-011701bb6704?w=500",
-      "icon": "🎮"
+      "icon": "\ud83c\udfae"
     },
     {
       "id": "cpu",
       "name": "Processors",
       "description": "Powerful CPUs for ultimate performance",
       "image": "https://images.unsplash.com/photo-1555617981-dac3880eac6e?w=500",
-      "icon": "⚡"
+      "icon": "\u26a1"
     },
     {
       "id": "ram",
       "name": "Memory",
       "description": "Fast and reliable RAM modules",
       "image": "https://images.unsplash.com/photo-1562976540-1502c2145186?w=500",
-      "icon": "💾"
+      "icon": "\ud83d\udcbe"
     },
     {
       "id": "motherboard",
       "name": "Motherboards",
       "description": "Premium motherboards for your build",
       "image": "https://images.unsplash.com/photo-1588872657578-7efd1f1555ed?w=500",
-      "icon": "🔌"
+      "icon": "\ud83d\udd0c"
     },
     {
       "id": "storage",
       "name": "Storage",
       "description": "SSDs and HDDs for all your data needs",
       "image": "https://images.unsplash.com/photo-1597872200969-2b65d56bd16b?w=500",
-      "icon": "💿"
+      "icon": "\ud83d\udcbf"
     },
     {
       "id": "case",
       "name": "Cases",
       "description": "Stylish and functional PC cases",
       "image": "https://images.unsplash.com/photo-1587202372634-32705e3bf49c?w=500",
-      "icon": "🖥️"
+      "icon": "\ud83d\udda5\ufe0f"
     },
     {
       "id": "psu",
       "name": "Power Supplies",
       "description": "Reliable power for your system",
       "image": "https://images.unsplash.com/photo-1609091839311-d5365f9ff1c5?w=500",
-      "icon": "🔋"
+      "icon": "\ud83d\udd0b"
     },
     {
       "id": "cooling",
       "name": "Cooling",
       "description": "Keep your system running cool",
       "image": "https://images.unsplash.com/photo-1587202372775-e229f172b9d7?w=500",
-      "icon": "❄️"
+      "icon": "\u2744\ufe0f"
     },
     {
       "id": "peripherals",
       "name": "Peripherals",
       "description": "Keyboards, mice, and accessories",
       "image": "https://images.unsplash.com/photo-1587829741301-dc798b83add3?w=500",
-      "icon": "⌨️"
+      "icon": "\u2328\ufe0f"
     },
     {
       "id": "monitor",
       "name": "Monitors",
       "description": "High-refresh gaming monitors",
       "image": "https://images.unsplash.com/photo-1527443224154-c4a3942d3acf?w=500",
-      "icon": "🖥️"
+      "icon": "\ud83d\udda5\ufe0f"
     }
   ],
   "products": [
@@ -79,13 +79,14 @@
       "brand": "NVIDIA",
       "price": 1599.99,
       "originalPrice": 1799.99,
-      "rating": 4.9,
+      "rating": 3.8,
       "reviews": 1247,
       "stock": 15,
       "image": "https://images.unsplash.com/photo-1591488320449-011701bb6704?w=800",
       "images": [
         "https://images.unsplash.com/photo-1591488320449-011701bb6704?w=800",
-        "https://images.unsplash.com/photo-1587202372634-32705e3bf49c?w=800"
+        "https://images.unsplash.com/photo-1587202372634-32705e3bf49c?w=800",
+        "https://images.unsplash.com/photo-1591799264318-7e6ef8ddb7ea?w=800"
       ],
       "description": "The ultimate gaming GPU with 24GB GDDR6X memory, ray tracing, and DLSS 3.0 technology.",
       "specs": {
@@ -95,9 +96,15 @@
         "TDP": "450W",
         "Ports": "3x DisplayPort 1.4a, 1x HDMI 2.1"
       },
-      "features": ["Ray Tracing", "DLSS 3.0", "8K Ready", "RGB Lighting"],
+      "features": [
+        "Ray Tracing",
+        "DLSS 3.0",
+        "8K Ready",
+        "RGB Lighting"
+      ],
       "featured": true,
-      "sale": true
+      "sale": true,
+      "createdAt": "2025-10-22"
     },
     {
       "id": "gpu-002",
@@ -105,12 +112,14 @@
       "category": "gpu",
       "brand": "AMD",
       "price": 999.99,
-      "rating": 4.7,
+      "rating": 3.2,
       "reviews": 892,
       "stock": 23,
       "image": "https://images.unsplash.com/photo-1591488320449-011701bb6704?w=800",
       "images": [
-        "https://images.unsplash.com/photo-1591488320449-011701bb6704?w=800"
+        "https://images.unsplash.com/photo-1591488320449-011701bb6704?w=800",
+        "https://images.unsplash.com/photo-1587202372634-32705e3bf49c?w=800",
+        "https://images.unsplash.com/photo-1591799264318-7e6ef8ddb7ea?w=800"
       ],
       "description": "AMD's flagship GPU with 24GB GDDR6 memory and exceptional 4K gaming performance.",
       "specs": {
@@ -120,8 +129,14 @@
         "TDP": "355W",
         "Ports": "2x DisplayPort 2.1, 2x HDMI 2.1"
       },
-      "features": ["Ray Tracing", "FSR 3.0", "4K Gaming", "Infinity Cache"],
-      "featured": true
+      "features": [
+        "Ray Tracing",
+        "FSR 3.0",
+        "4K Gaming",
+        "Infinity Cache"
+      ],
+      "featured": true,
+      "createdAt": "2025-09-24"
     },
     {
       "id": "gpu-003",
@@ -129,12 +144,14 @@
       "category": "gpu",
       "brand": "NVIDIA",
       "price": 799.99,
-      "rating": 4.8,
+      "rating": 3.5,
       "reviews": 654,
       "stock": 31,
       "image": "https://images.unsplash.com/photo-1591488320449-011701bb6704?w=800",
       "images": [
-        "https://images.unsplash.com/photo-1591488320449-011701bb6704?w=800"
+        "https://images.unsplash.com/photo-1591488320449-011701bb6704?w=800",
+        "https://images.unsplash.com/photo-1587202372634-32705e3bf49c?w=800",
+        "https://images.unsplash.com/photo-1591799264318-7e6ef8ddb7ea?w=800"
       ],
       "description": "High-performance 1440p gaming with 12GB GDDR6X and advanced ray tracing.",
       "specs": {
@@ -143,7 +160,12 @@
         "CUDA Cores": "7680",
         "TDP": "285W"
       },
-      "features": ["DLSS 3.0", "Ray Tracing", "1440p Optimized"]
+      "features": [
+        "DLSS 3.0",
+        "Ray Tracing",
+        "1440p Optimized"
+      ],
+      "createdAt": "2025-08-20"
     },
     {
       "id": "cpu-001",
@@ -152,12 +174,14 @@
       "brand": "Intel",
       "price": 589.99,
       "originalPrice": 649.99,
-      "rating": 4.8,
+      "rating": 3.5,
       "reviews": 1023,
       "stock": 42,
       "image": "https://images.unsplash.com/photo-1555617981-dac3880eac6e?w=800",
       "images": [
-        "https://images.unsplash.com/photo-1555617981-dac3880eac6e?w=800"
+        "https://images.unsplash.com/photo-1555617981-dac3880eac6e?w=800",
+        "https://images.unsplash.com/photo-1591799265444-d66432b91588?w=800",
+        "https://images.unsplash.com/photo-1518770660439-4636190af475?w=800"
       ],
       "description": "24-core powerhouse with up to 6.0 GHz boost clock for extreme gaming and content creation.",
       "specs": {
@@ -168,9 +192,15 @@
         "Cache": "36MB",
         "TDP": "125W (253W Turbo)"
       },
-      "features": ["Unlocked", "DDR5 Support", "PCIe 5.0", "Integrated Graphics"],
+      "features": [
+        "Unlocked",
+        "DDR5 Support",
+        "PCIe 5.0",
+        "Integrated Graphics"
+      ],
       "featured": true,
-      "sale": true
+      "sale": true,
+      "createdAt": "2025-10-08"
     },
     {
       "id": "cpu-002",
@@ -178,12 +208,14 @@
       "category": "cpu",
       "brand": "AMD",
       "price": 549.99,
-      "rating": 4.9,
+      "rating": 3.8,
       "reviews": 876,
       "stock": 28,
       "image": "https://images.unsplash.com/photo-1555617981-dac3880eac6e?w=800",
       "images": [
-        "https://images.unsplash.com/photo-1555617981-dac3880eac6e?w=800"
+        "https://images.unsplash.com/photo-1555617981-dac3880eac6e?w=800",
+        "https://images.unsplash.com/photo-1591799265444-d66432b91588?w=800",
+        "https://images.unsplash.com/photo-1518770660439-4636190af475?w=800"
       ],
       "description": "16-core beast with 5.7 GHz boost and Zen 4 architecture for ultimate performance.",
       "specs": {
@@ -194,8 +226,14 @@
         "Cache": "80MB",
         "TDP": "170W"
       },
-      "features": ["Unlocked", "DDR5 Support", "PCIe 5.0", "5nm Process"],
-      "featured": true
+      "features": [
+        "Unlocked",
+        "DDR5 Support",
+        "PCIe 5.0",
+        "5nm Process"
+      ],
+      "featured": true,
+      "createdAt": "2025-10-09"
     },
     {
       "id": "cpu-003",
@@ -203,12 +241,14 @@
       "category": "cpu",
       "brand": "Intel",
       "price": 399.99,
-      "rating": 4.7,
+      "rating": 3.2,
       "reviews": 542,
       "stock": 36,
       "image": "https://images.unsplash.com/photo-1555617981-dac3880eac6e?w=800",
       "images": [
-        "https://images.unsplash.com/photo-1555617981-dac3880eac6e?w=800"
+        "https://images.unsplash.com/photo-1555617981-dac3880eac6e?w=800",
+        "https://images.unsplash.com/photo-1591799265444-d66432b91588?w=800",
+        "https://images.unsplash.com/photo-1518770660439-4636190af475?w=800"
       ],
       "description": "20-core processor perfect for high-end gaming and multitasking.",
       "specs": {
@@ -218,7 +258,12 @@
         "Cache": "33MB",
         "TDP": "125W"
       },
-      "features": ["Unlocked", "DDR5 Support", "PCIe 5.0"]
+      "features": [
+        "Unlocked",
+        "DDR5 Support",
+        "PCIe 5.0"
+      ],
+      "createdAt": "2025-07-30"
     },
     {
       "id": "ram-001",
@@ -226,12 +271,14 @@
       "category": "ram",
       "brand": "Corsair",
       "price": 159.99,
-      "rating": 4.8,
+      "rating": 3.5,
       "reviews": 723,
       "stock": 67,
       "image": "https://images.unsplash.com/photo-1562976540-1502c2145186?w=800",
       "images": [
-        "https://images.unsplash.com/photo-1562976540-1502c2145186?w=800"
+        "https://images.unsplash.com/photo-1562976540-1502c2145186?w=800",
+        "https://images.unsplash.com/photo-1560762484-813fc97650a0?w=800",
+        "https://images.unsplash.com/photo-1531297484001-80022131f5a1?w=800"
       ],
       "description": "Premium DDR5 RGB memory kit with exceptional performance and stunning aesthetics.",
       "specs": {
@@ -241,8 +288,14 @@
         "Latency": "CL36",
         "Voltage": "1.35V"
       },
-      "features": ["RGB Lighting", "XMP 3.0", "Aluminum Heatspreader", "Lifetime Warranty"],
-      "featured": true
+      "features": [
+        "RGB Lighting",
+        "XMP 3.0",
+        "Aluminum Heatspreader",
+        "Lifetime Warranty"
+      ],
+      "featured": true,
+      "createdAt": "2025-06-12"
     },
     {
       "id": "ram-002",
@@ -251,12 +304,14 @@
       "brand": "G.SKILL",
       "price": 279.99,
       "originalPrice": 329.99,
-      "rating": 4.9,
+      "rating": 3.8,
       "reviews": 456,
       "stock": 34,
       "image": "https://images.unsplash.com/photo-1562976540-1502c2145186?w=800",
       "images": [
-        "https://images.unsplash.com/photo-1562976540-1502c2145186?w=800"
+        "https://images.unsplash.com/photo-1562976540-1502c2145186?w=800",
+        "https://images.unsplash.com/photo-1560762484-813fc97650a0?w=800",
+        "https://images.unsplash.com/photo-1531297484001-80022131f5a1?w=800"
       ],
       "description": "High-capacity DDR5 kit for demanding workloads and extreme gaming.",
       "specs": {
@@ -265,8 +320,13 @@
         "Type": "DDR5",
         "Latency": "CL32"
       },
-      "features": ["RGB Lighting", "XMP 3.0", "Ultra Low Latency"],
-      "sale": true
+      "features": [
+        "RGB Lighting",
+        "XMP 3.0",
+        "Ultra Low Latency"
+      ],
+      "sale": true,
+      "createdAt": "2025-08-15"
     },
     {
       "id": "motherboard-001",
@@ -274,12 +334,14 @@
       "category": "motherboard",
       "brand": "ASUS",
       "price": 629.99,
-      "rating": 4.9,
+      "rating": 3.8,
       "reviews": 342,
       "stock": 18,
       "image": "https://images.unsplash.com/photo-1588872657578-7efd1f1555ed?w=800",
       "images": [
-        "https://images.unsplash.com/photo-1588872657578-7efd1f1555ed?w=800"
+        "https://images.unsplash.com/photo-1588872657578-7efd1f1555ed?w=800",
+        "https://images.unsplash.com/photo-1591488320449-011701bb6704?w=800",
+        "https://images.unsplash.com/photo-1587202372775-e229f172b9d7?w=800"
       ],
       "description": "Premium Z790 motherboard with PCIe 5.0, DDR5 support, and advanced cooling.",
       "specs": {
@@ -290,8 +352,15 @@
         "Storage": "5x M.2, 6x SATA",
         "Networking": "WiFi 6E, 2.5G LAN"
       },
-      "features": ["PCIe 5.0", "WiFi 6E", "Thunderbolt 4", "AI Overclocking", "RGB Fusion"],
-      "featured": true
+      "features": [
+        "PCIe 5.0",
+        "WiFi 6E",
+        "Thunderbolt 4",
+        "AI Overclocking",
+        "RGB Fusion"
+      ],
+      "featured": true,
+      "createdAt": "2025-05-10"
     },
     {
       "id": "motherboard-002",
@@ -299,12 +368,14 @@
       "category": "motherboard",
       "brand": "MSI",
       "price": 449.99,
-      "rating": 4.7,
+      "rating": 3.2,
       "reviews": 287,
       "stock": 22,
       "image": "https://images.unsplash.com/photo-1588872657578-7efd1f1555ed?w=800",
       "images": [
-        "https://images.unsplash.com/photo-1588872657578-7efd1f1555ed?w=800"
+        "https://images.unsplash.com/photo-1588872657578-7efd1f1555ed?w=800",
+        "https://images.unsplash.com/photo-1591488320449-011701bb6704?w=800",
+        "https://images.unsplash.com/photo-1587202372775-e229f172b9d7?w=800"
       ],
       "description": "High-performance X670E motherboard for AMD Ryzen 7000 series processors.",
       "specs": {
@@ -314,7 +385,13 @@
         "PCIe": "PCIe 5.0 x16",
         "Storage": "4x M.2, 6x SATA"
       },
-      "features": ["PCIe 5.0", "WiFi 6E", "USB4", "Mystic Light RGB"]
+      "features": [
+        "PCIe 5.0",
+        "WiFi 6E",
+        "USB4",
+        "Mystic Light RGB"
+      ],
+      "createdAt": "2025-06-17"
     },
     {
       "id": "storage-001",
@@ -323,12 +400,14 @@
       "brand": "Samsung",
       "price": 179.99,
       "originalPrice": 219.99,
-      "rating": 4.9,
+      "rating": 3.8,
       "reviews": 1456,
       "stock": 89,
       "image": "https://images.unsplash.com/photo-1597872200969-2b65d56bd16b?w=800",
       "images": [
-        "https://images.unsplash.com/photo-1597872200969-2b65d56bd16b?w=800"
+        "https://images.unsplash.com/photo-1597872200969-2b65d56bd16b?w=800",
+        "https://images.unsplash.com/photo-1531297484001-80022131f5a1?w=800",
+        "https://images.unsplash.com/photo-1562976540-1502c2145186?w=800"
       ],
       "description": "Blazing-fast PCIe 4.0 NVMe SSD with up to 7,450 MB/s read speeds.",
       "specs": {
@@ -338,9 +417,15 @@
         "Write Speed": "6,900 MB/s",
         "Form Factor": "M.2 2280"
       },
-      "features": ["PCIe 4.0", "DRAM Cache", "5-Year Warranty", "Low Power Consumption"],
+      "features": [
+        "PCIe 4.0",
+        "DRAM Cache",
+        "5-Year Warranty",
+        "Low Power Consumption"
+      ],
       "featured": true,
-      "sale": true
+      "sale": true,
+      "createdAt": "2025-05-24"
     },
     {
       "id": "storage-002",
@@ -348,12 +433,14 @@
       "category": "storage",
       "brand": "Western Digital",
       "price": 349.99,
-      "rating": 4.8,
+      "rating": 3.5,
       "reviews": 892,
       "stock": 45,
       "image": "https://images.unsplash.com/photo-1597872200969-2b65d56bd16b?w=800",
       "images": [
-        "https://images.unsplash.com/photo-1597872200969-2b65d56bd16b?w=800"
+        "https://images.unsplash.com/photo-1597872200969-2b65d56bd16b?w=800",
+        "https://images.unsplash.com/photo-1531297484001-80022131f5a1?w=800",
+        "https://images.unsplash.com/photo-1562976540-1502c2145186?w=800"
       ],
       "description": "High-capacity PCIe 4.0 SSD designed for gamers and content creators.",
       "specs": {
@@ -362,7 +449,12 @@
         "Read Speed": "7,300 MB/s",
         "Write Speed": "6,600 MB/s"
       },
-      "features": ["Game Mode 2.0", "Heatsink Option", "5-Year Warranty"]
+      "features": [
+        "Game Mode 2.0",
+        "Heatsink Option",
+        "5-Year Warranty"
+      ],
+      "createdAt": "2025-09-02"
     },
     {
       "id": "case-001",
@@ -370,12 +462,14 @@
       "category": "case",
       "brand": "Lian Li",
       "price": 169.99,
-      "rating": 4.9,
+      "rating": 3.8,
       "reviews": 1234,
       "stock": 27,
       "image": "https://images.unsplash.com/photo-1587202372634-32705e3bf49c?w=800",
       "images": [
-        "https://images.unsplash.com/photo-1587202372634-32705e3bf49c?w=800"
+        "https://images.unsplash.com/photo-1587202372634-32705e3bf49c?w=800",
+        "https://images.unsplash.com/photo-1593640408182-31c70c8268f5?w=800",
+        "https://images.unsplash.com/photo-1587202372583-49330a15584d?w=800"
       ],
       "description": "Premium mid-tower case with dual-chamber design and excellent airflow.",
       "specs": {
@@ -385,8 +479,14 @@
         "GPU Clearance": "420mm",
         "Radiator Support": "Top: 360mm, Side: 360mm, Bottom: 360mm"
       },
-      "features": ["Tempered Glass", "USB-C", "Modular Design", "RGB Compatible"],
-      "featured": true
+      "features": [
+        "Tempered Glass",
+        "USB-C",
+        "Modular Design",
+        "RGB Compatible"
+      ],
+      "featured": true,
+      "createdAt": "2025-08-21"
     },
     {
       "id": "case-002",
@@ -395,12 +495,14 @@
       "brand": "NZXT",
       "price": 129.99,
       "originalPrice": 149.99,
-      "rating": 4.7,
+      "rating": 3.2,
       "reviews": 678,
       "stock": 41,
       "image": "https://images.unsplash.com/photo-1587202372634-32705e3bf49c?w=800",
       "images": [
-        "https://images.unsplash.com/photo-1587202372634-32705e3bf49c?w=800"
+        "https://images.unsplash.com/photo-1587202372634-32705e3bf49c?w=800",
+        "https://images.unsplash.com/photo-1593640408182-31c70c8268f5?w=800",
+        "https://images.unsplash.com/photo-1587202372583-49330a15584d?w=800"
       ],
       "description": "High-airflow case with clean cable management and RGB fans included.",
       "specs": {
@@ -409,8 +511,14 @@
         "Motherboard": "ATX, Micro-ATX, Mini-ITX",
         "GPU Clearance": "400mm"
       },
-      "features": ["High Airflow", "Cable Management", "3x RGB Fans", "USB-C"],
-      "sale": true
+      "features": [
+        "High Airflow",
+        "Cable Management",
+        "3x RGB Fans",
+        "USB-C"
+      ],
+      "sale": true,
+      "createdAt": "2025-07-24"
     },
     {
       "id": "psu-001",
@@ -418,12 +526,14 @@
       "category": "psu",
       "brand": "Corsair",
       "price": 189.99,
-      "rating": 4.9,
+      "rating": 3.8,
       "reviews": 543,
       "stock": 56,
       "image": "https://images.unsplash.com/photo-1609091839311-d5365f9ff1c5?w=800",
       "images": [
-        "https://images.unsplash.com/photo-1609091839311-d5365f9ff1c5?w=800"
+        "https://images.unsplash.com/photo-1609091839311-d5365f9ff1c5?w=800",
+        "https://images.unsplash.com/photo-1591488320449-011701bb6704?w=800",
+        "https://images.unsplash.com/photo-1518770660439-4636190af475?w=800"
       ],
       "description": "Fully modular 80+ Gold PSU with zero RPM fan mode and premium components.",
       "specs": {
@@ -433,8 +543,14 @@
         "Fan Size": "135mm",
         "Warranty": "10 Years"
       },
-      "features": ["80+ Gold", "Zero RPM Mode", "Fully Modular", "10-Year Warranty"],
-      "featured": true
+      "features": [
+        "80+ Gold",
+        "Zero RPM Mode",
+        "Fully Modular",
+        "10-Year Warranty"
+      ],
+      "featured": true,
+      "createdAt": "2025-05-11"
     },
     {
       "id": "psu-002",
@@ -442,12 +558,14 @@
       "category": "psu",
       "brand": "Seasonic",
       "price": 229.99,
-      "rating": 5.0,
+      "rating": 4.0,
       "reviews": 321,
       "stock": 19,
       "image": "https://images.unsplash.com/photo-1609091839311-d5365f9ff1c5?w=800",
       "images": [
-        "https://images.unsplash.com/photo-1609091839311-d5365f9ff1c5?w=800"
+        "https://images.unsplash.com/photo-1609091839311-d5365f9ff1c5?w=800",
+        "https://images.unsplash.com/photo-1591488320449-011701bb6704?w=800",
+        "https://images.unsplash.com/photo-1518770660439-4636190af475?w=800"
       ],
       "description": "Premium 80+ Titanium PSU with industry-leading efficiency.",
       "specs": {
@@ -456,7 +574,12 @@
         "Modular": "Fully Modular",
         "Warranty": "12 Years"
       },
-      "features": ["80+ Titanium", "Fanless Mode", "12-Year Warranty"]
+      "features": [
+        "80+ Titanium",
+        "Fanless Mode",
+        "12-Year Warranty"
+      ],
+      "createdAt": "2025-10-30"
     },
     {
       "id": "cooling-001",
@@ -464,12 +587,14 @@
       "category": "cooling",
       "brand": "NZXT",
       "price": 279.99,
-      "rating": 4.8,
+      "rating": 3.5,
       "reviews": 892,
       "stock": 33,
       "image": "https://images.unsplash.com/photo-1587202372775-e229f172b9d7?w=800",
       "images": [
-        "https://images.unsplash.com/photo-1587202372775-e229f172b9d7?w=800"
+        "https://images.unsplash.com/photo-1587202372775-e229f172b9d7?w=800",
+        "https://images.unsplash.com/photo-1591488320449-011701bb6704?w=800",
+        "https://images.unsplash.com/photo-1593640408182-31c70c8268f5?w=800"
       ],
       "description": "360mm AIO with customizable LCD display and high-performance cooling.",
       "specs": {
@@ -479,8 +604,14 @@
         "Socket Support": "LGA1700, LGA1200, AM5, AM4",
         "Pump Speed": "800-2800 RPM"
       },
-      "features": ["LCD Display", "RGB Lighting", "CAM Software", "Quiet Operation"],
-      "featured": true
+      "features": [
+        "LCD Display",
+        "RGB Lighting",
+        "CAM Software",
+        "Quiet Operation"
+      ],
+      "featured": true,
+      "createdAt": "2025-06-30"
     },
     {
       "id": "cooling-002",
@@ -488,12 +619,14 @@
       "category": "cooling",
       "brand": "be quiet!",
       "price": 99.99,
-      "rating": 4.9,
+      "rating": 3.8,
       "reviews": 567,
       "stock": 48,
       "image": "https://images.unsplash.com/photo-1587202372775-e229f172b9d7?w=800",
       "images": [
-        "https://images.unsplash.com/photo-1587202372775-e229f172b9d7?w=800"
+        "https://images.unsplash.com/photo-1587202372775-e229f172b9d7?w=800",
+        "https://images.unsplash.com/photo-1591488320449-011701bb6704?w=800",
+        "https://images.unsplash.com/photo-1593640408182-31c70c8268f5?w=800"
       ],
       "description": "Premium air cooler with dual-tower design and near-silent operation.",
       "specs": {
@@ -502,7 +635,12 @@
         "Fans": "2x 135mm",
         "TDP": "250W"
       },
-      "features": ["Silent Operation", "Dual Tower", "Premium Build Quality"]
+      "features": [
+        "Silent Operation",
+        "Dual Tower",
+        "Premium Build Quality"
+      ],
+      "createdAt": "2025-09-28"
     },
     {
       "id": "peripheral-001",
@@ -510,11 +648,13 @@
       "category": "peripherals",
       "brand": "Logitech",
       "price": 159.99,
-      "rating": 4.9,
+      "rating": 3.8,
       "reviews": 2134,
       "stock": 78,
       "image": "https://images.unsplash.com/photo-1587829741301-dc798b83add3?w=800",
       "images": [
+        "https://images.unsplash.com/photo-1587829741301-dc798b83add3?w=800",
+        "https://images.unsplash.com/photo-1595225476474-87563907a212?w=800",
         "https://images.unsplash.com/photo-1587829741301-dc798b83add3?w=800"
       ],
       "description": "Ultra-lightweight wireless gaming mouse under 63 grams with HERO 25K sensor.",
@@ -525,8 +665,14 @@
         "DPI": "100-25,600",
         "Battery": "70 hours"
       },
-      "features": ["Ultra Lightweight", "HERO 25K Sensor", "Wireless", "70-Hour Battery"],
-      "featured": true
+      "features": [
+        "Ultra Lightweight",
+        "HERO 25K Sensor",
+        "Wireless",
+        "70-Hour Battery"
+      ],
+      "featured": true,
+      "createdAt": "2025-09-01"
     },
     {
       "id": "peripheral-002",
@@ -535,11 +681,13 @@
       "brand": "Corsair",
       "price": 229.99,
       "originalPrice": 269.99,
-      "rating": 4.8,
+      "rating": 3.5,
       "reviews": 1456,
       "stock": 42,
       "image": "https://images.unsplash.com/photo-1587829741301-dc798b83add3?w=800",
       "images": [
+        "https://images.unsplash.com/photo-1587829741301-dc798b83add3?w=800",
+        "https://images.unsplash.com/photo-1595225476474-87563907a212?w=800",
         "https://images.unsplash.com/photo-1587829741301-dc798b83add3?w=800"
       ],
       "description": "Premium mechanical keyboard with per-key RGB and dedicated media controls.",
@@ -549,8 +697,14 @@
         "Backlighting": "Per-Key RGB",
         "Connectivity": "USB-C"
       },
-      "features": ["Cherry MX Switches", "Per-Key RGB", "Media Controls", "USB Passthrough"],
-      "sale": true
+      "features": [
+        "Cherry MX Switches",
+        "Per-Key RGB",
+        "Media Controls",
+        "USB Passthrough"
+      ],
+      "sale": true,
+      "createdAt": "2025-05-29"
     },
     {
       "id": "monitor-001",
@@ -558,12 +712,14 @@
       "category": "monitor",
       "brand": "ASUS",
       "price": 899.99,
-      "rating": 4.9,
+      "rating": 3.8,
       "reviews": 456,
       "stock": 24,
       "image": "https://images.unsplash.com/photo-1527443224154-c4a3942d3acf?w=800",
       "images": [
-        "https://images.unsplash.com/photo-1527443224154-c4a3942d3acf?w=800"
+        "https://images.unsplash.com/photo-1527443224154-c4a3942d3acf?w=800",
+        "https://images.unsplash.com/photo-1593640408182-31c70c8268f5?w=800",
+        "https://images.unsplash.com/photo-1547082299-de196ea013d6?w=800"
       ],
       "description": "27-inch 1440p OLED gaming monitor with 240Hz refresh rate and 0.03ms response time.",
       "specs": {
@@ -574,8 +730,15 @@
         "Response Time": "0.03ms",
         "HDR": "HDR10, DisplayHDR True Black 400"
       },
-      "features": ["OLED Panel", "240Hz", "G-SYNC Compatible", "HDR", "Ergonomic Stand"],
-      "featured": true
+      "features": [
+        "OLED Panel",
+        "240Hz",
+        "G-SYNC Compatible",
+        "HDR",
+        "Ergonomic Stand"
+      ],
+      "featured": true,
+      "createdAt": "2025-06-06"
     },
     {
       "id": "monitor-002",
@@ -584,12 +747,14 @@
       "brand": "Samsung",
       "price": 1299.99,
       "originalPrice": 1499.99,
-      "rating": 4.8,
+      "rating": 3.5,
       "reviews": 678,
       "stock": 12,
       "image": "https://images.unsplash.com/photo-1527443224154-c4a3942d3acf?w=800",
       "images": [
-        "https://images.unsplash.com/photo-1527443224154-c4a3942d3acf?w=800"
+        "https://images.unsplash.com/photo-1527443224154-c4a3942d3acf?w=800",
+        "https://images.unsplash.com/photo-1593640408182-31c70c8268f5?w=800",
+        "https://images.unsplash.com/photo-1547082299-de196ea013d6?w=800"
       ],
       "description": "49-inch super ultrawide curved gaming monitor with 240Hz and Quantum Dot technology.",
       "specs": {
@@ -600,8 +765,15 @@
         "Curve": "1000R",
         "HDR": "HDR1000"
       },
-      "features": ["Super Ultrawide", "240Hz", "1000R Curve", "Quantum Dot", "G-SYNC Compatible"],
-      "sale": true
+      "features": [
+        "Super Ultrawide",
+        "240Hz",
+        "1000R Curve",
+        "Quantum Dot",
+        "G-SYNC Compatible"
+      ],
+      "sale": true,
+      "createdAt": "2025-05-09"
     }
   ]
 }
