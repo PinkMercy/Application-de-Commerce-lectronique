@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from './Pages/Home';
 import Products from './Pages/Products';
@@ -12,17 +13,50 @@ import { useState, useEffect } from 'react';
 
 function App() {
   const [isCartOpen, setIsCartOpen] = useState(false);
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const [cartItems, setCartItems] = useState<any[]>(() => {
     // Load cart from localStorage on initial render
     const savedCart = localStorage.getItem('cart');
     return savedCart ? JSON.parse(savedCart) : [];
+  });
+  const [currentUser, setCurrentUser] = useState<any>(() => {
+    // Load current user from localStorage on initial render
+    const savedUser = localStorage.getItem('currentUser');
+    return savedUser ? JSON.parse(savedUser) : null;
   });
 
   // Save cart to localStorage whenever it changes
   useEffect(() => {
     localStorage.setItem('cart', JSON.stringify(cartItems));
   }, [cartItems]);
+
+  // Check for user changes in localStorage (for sign in/sign up/sign out)
+  useEffect(() => {
+    const handleStorageChange = () => {
+      const savedUser = localStorage.getItem('currentUser');
+      setCurrentUser(savedUser ? JSON.parse(savedUser) : null);
+    };
+
+    window.addEventListener('storage', handleStorageChange);
+    // Also check on component mount and when page becomes visible
+    const interval = setInterval(() => {
+      const savedUser = localStorage.getItem('currentUser');
+      const currentUserString = JSON.stringify(currentUser);
+      const savedUserString = savedUser || 'null';
+      if (currentUserString !== savedUserString) {
+        setCurrentUser(savedUser ? JSON.parse(savedUser) : null);
+      }
+    }, 500);
+
+    return () => {
+      window.removeEventListener('storage', handleStorageChange);
+      clearInterval(interval);
+    };
+  }, [currentUser]);
+
+  const handleSignOut = () => {
+    localStorage.removeItem('currentUser');
+    setCurrentUser(null);
+  };
 
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const addToCart = (product: any) => {
@@ -58,6 +92,8 @@ function App() {
         <Navbar 
           cartCount={cartItems.reduce((sum, item) => sum + item.quantity, 0)}
           onCartClick={() => setIsCartOpen(true)}
+          currentUser={currentUser}
+          onSignOut={handleSignOut}
         />
         <Cart
           isOpen={isCartOpen}
