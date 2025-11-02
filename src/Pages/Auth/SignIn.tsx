@@ -1,13 +1,32 @@
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { useState } from 'react';
 
 function SignIn() {
+  const navigate = useNavigate();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const [error, setError] = useState('');
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    console.log('Sign in:', { email, password });
+    setError('');
+
+    // Get users from localStorage
+    const usersJson = localStorage.getItem('users');
+    const users = usersJson ? JSON.parse(usersJson) : [];
+
+    // Find user with matching email and password
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    const user = users.find((u: any) => u.email === email && u.password === password);
+
+    if (user) {
+      // Save current user (without password)
+      localStorage.setItem('currentUser', JSON.stringify({ name: user.name, email: user.email }));
+      // Redirect to home
+      navigate('/');
+    } else {
+      setError('Invalid email or password');
+    }
   };
 
   return (
@@ -21,6 +40,11 @@ function SignIn() {
         </div>
 
         <div className="card p-8">
+          {error && (
+            <div className="mb-4 p-3 bg-red-500/10 border border-red-500 rounded-lg text-red-400 text-sm">
+              {error}
+            </div>
+          )}
           <form onSubmit={handleSubmit} className="space-y-6">
             <div>
               <label className="block text-sm font-medium mb-2">Email</label>
