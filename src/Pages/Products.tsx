@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { Link, useParams } from 'react-router-dom';
 import { useState, useMemo } from 'react';
 import productsData from '../data/products.json';
@@ -13,6 +14,46 @@ function Products({ addToCart }: ProductsProps) {
   const [customMinPrice, setCustomMinPrice] = useState('');
   const [customMaxPrice, setCustomMaxPrice] = useState('');
   const [sortBy, setSortBy] = useState('featured');
+  const [favorites, setFavorites] = useState<string[]>([]);
+
+  // Load favorites
+  useState(() => {
+    const currentUser = localStorage.getItem('currentUser');
+    if (currentUser) {
+      const user = JSON.parse(currentUser);
+      const favoritesJson = localStorage.getItem('favorites');
+      const allFavorites = favoritesJson ? JSON.parse(favoritesJson) : {};
+      const userFavorites = allFavorites[user.email] || [];
+      setFavorites(userFavorites.map((p: any) => p.id));
+    }
+  });
+
+  const toggleFavorite = (product: any) => {
+    const currentUser = localStorage.getItem('currentUser');
+    if (!currentUser) {
+      alert('Please sign in to add favorites');
+      return;
+    }
+
+    const user = JSON.parse(currentUser);
+    const favoritesJson = localStorage.getItem('favorites');
+    const allFavorites = favoritesJson ? JSON.parse(favoritesJson) : {};
+    const userFavorites = allFavorites[user.email] || [];
+
+    const isFavorite = userFavorites.some((p: any) => p.id === product.id);
+
+    if (isFavorite) {
+      // Remove from favorites
+      allFavorites[user.email] = userFavorites.filter((p: any) => p.id !== product.id);
+      setFavorites(favorites.filter(id => id !== product.id));
+    } else {
+      // Add to favorites
+      allFavorites[user.email] = [...userFavorites, product];
+      setFavorites([...favorites, product.id]);
+    }
+
+    localStorage.setItem('favorites', JSON.stringify(allFavorites));
+  };
 
   // Helper function to render stars based on rating
   const renderStars = (rating: number) => {
@@ -215,14 +256,25 @@ function Products({ addToCart }: ProductsProps) {
                       alt={product.name}
                       className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-500"
                     />
+                    <button
+                      onClick={(e) => {
+                        e.preventDefault();
+                        toggleFavorite(product);
+                      }}
+                      className="absolute top-4 right-4 p-2 bg-slate-900/80 hover:bg-slate-800 rounded-full transition-colors z-10"
+                    >
+                      <svg className="w-5 h-5" fill={favorites.includes(product.id) ? 'currentColor' : 'none'} stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" className={favorites.includes(product.id) ? 'text-red-500' : 'text-white'} />
+                      </svg>
+                    </button>
                     {product.sale && (
-                      <span className="absolute top-4 right-4 badge badge-warning sale-pulse">
+                      <span className="absolute top-4 left-4 badge badge-warning sale-pulse">
                         SALE
                       </span>
                     )}
-                    {product.stock < 20 && (
-                      <span className="absolute top-4 left-4 badge badge-danger">
-                        {product.stock === 0 ? "Hors stock" : `Only ${product.stock} left`}
+                    {product.stock < 20 && product.stock > 0 && (
+                      <span className="absolute top-16 left-4 badge badge-danger">
+                        Only {product.stock} left
                       </span>
                     )}
                   </div>
