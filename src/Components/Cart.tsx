@@ -12,9 +12,10 @@ interface CartProps {
   items: CartItem[];
   onUpdateQuantity: (productId: string, quantity: number) => void;
   onRemove: (productId: string) => void;
+  onCheckout: () => void;
 }
 
-function Cart({ isOpen, onClose, items, onUpdateQuantity, onRemove }: CartProps) {
+function Cart({ isOpen, onClose, items, onUpdateQuantity, onRemove, onCheckout }: CartProps) {
   const subtotal = items.reduce((sum, item) => sum + item.price * item.quantity, 0);
   
   // Calculate delivery price based on subtotal
@@ -127,7 +128,7 @@ function Cart({ isOpen, onClose, items, onUpdateQuantity, onRemove }: CartProps)
                 <span className="text-2xl font-bold text-gradient">${total.toFixed(2)}</span>
               </div>
             </div>
-            <button className="btn btn-primary w-full">
+            <button onClick={onCheckout} className="btn btn-primary w-full">
               Proceed to Checkout
             </button>
           </div>
