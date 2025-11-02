@@ -7,6 +7,7 @@ import SignIn from './Pages/Auth/SignIn';
 import SignUp from './Pages/Auth/SignUp';
 import Navbar from './Components/Navbar';
 import Cart from './Components/Cart';
+import ScrollToTop from './Components/ScrollToTop';
 import { useState, useEffect } from 'react';
 
 function App() {
@@ -52,12 +53,13 @@ function App() {
 
   return (
     <BrowserRouter>
+      <ScrollToTop />
       <div className="min-h-screen bg-gray-950">
         <Navbar 
           cartCount={cartItems.reduce((sum, item) => sum + item.quantity, 0)}
           onCartClick={() => setIsCartOpen(true)}
         />
-        <Cart 
+        <Cart
           isOpen={isCartOpen}
           onClose={() => setIsCartOpen(false)}
           items={cartItems}
