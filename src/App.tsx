@@ -7,12 +7,23 @@ import SignIn from './Pages/Auth/SignIn';
 import SignUp from './Pages/Auth/SignUp';
 import Navbar from './Components/Navbar';
 import Cart from './Components/Cart';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 function App() {
   const [isCartOpen, setIsCartOpen] = useState(false);
-  const [cartItems, setCartItems] = useState<any[]>([]);
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const [cartItems, setCartItems] = useState<any[]>(() => {
+    // Load cart from localStorage on initial render
+    const savedCart = localStorage.getItem('cart');
+    return savedCart ? JSON.parse(savedCart) : [];
+  });
 
+  // Save cart to localStorage whenever it changes
+  useEffect(() => {
+    localStorage.setItem('cart', JSON.stringify(cartItems));
+  }, [cartItems]);
+
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const addToCart = (product: any) => {
     setCartItems(prev => {
       const existing = prev.find(item => item.id === product.id);
