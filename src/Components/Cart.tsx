@@ -15,7 +15,13 @@ interface CartProps {
 }
 
 function Cart({ isOpen, onClose, items, onUpdateQuantity, onRemove }: CartProps) {
-  const total = items.reduce((sum, item) => sum + item.price * item.quantity, 0);
+  const subtotal = items.reduce((sum, item) => sum + item.price * item.quantity, 0);
+  
+  // Calculate delivery price based on subtotal
+  // Free delivery for orders over $1000, otherwise $15
+  const deliveryPrice = items.length === 0 ? 0 : (subtotal >= 2000 ? 0 : 15);
+  
+  const total = subtotal + deliveryPrice;
 
   if (!isOpen) return null;
 
@@ -96,9 +102,30 @@ function Cart({ isOpen, onClose, items, onUpdateQuantity, onRemove }: CartProps)
         {/* Footer */}
         {items.length > 0 && (
           <div className="p-6 border-t border-slate-700 space-y-4">
-            <div className="flex justify-between text-lg">
-              <span className="text-gray-400">Total:</span>
-              <span className="text-2xl font-bold text-gradient">${total.toFixed(2)}</span>
+            <div className="space-y-2">
+              <div className="flex justify-between text-base">
+                <span className="text-gray-400">Subtotal:</span>
+                <span className="text-white font-semibold">${subtotal.toFixed(2)}</span>
+              </div>
+              <div className="flex justify-between text-base">
+                <span className="text-gray-400">Delivery:</span>
+                <span className="text-white font-semibold">
+                  {deliveryPrice === 0 ? (
+                    <span className="text-green-400">Free</span>
+                  ) : (
+                    `$${deliveryPrice.toFixed(2)}`
+                  )}
+                </span>
+              </div>
+              {subtotal < 2000 && subtotal > 0 && (
+                <p className="text-xs text-gray-500">
+                  Add ${(2000 - subtotal).toFixed(2)} more for free delivery!
+                </p>
+              )}
+              <div className="flex justify-between text-lg pt-2 border-t border-slate-700">
+                <span className="text-gray-400">Total:</span>
+                <span className="text-2xl font-bold text-gradient">${total.toFixed(2)}</span>
+              </div>
             </div>
             <button className="btn btn-primary w-full">
               Proceed to Checkout
