@@ -5,10 +5,13 @@ import SearchBar from './SearchBar';
 interface NavbarProps {
   cartCount: number;
   onCartClick: () => void;
+  currentUser: { name: string; email: string } | null;
+  onSignOut: () => void;
 }
 
-function Navbar({ cartCount, onCartClick }: NavbarProps) {
+function Navbar({ cartCount, onCartClick, currentUser, onSignOut }: NavbarProps) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isUserMenuOpen, setIsUserMenuOpen] = useState(false);
 
   return (
     <nav className="sticky top-0 z-50 glass border-b border-white/10">
@@ -76,12 +79,47 @@ function Navbar({ cartCount, onCartClick }: NavbarProps) {
             </button>
 
             {/* User Menu */}
-            <Link
-              to="/signin"
-              className="hidden sm:block btn btn-primary text-sm"
-            >
-              Sign In
-            </Link>
+            {currentUser ? (
+              <div className="hidden sm:block relative">
+                <button
+                  onClick={() => setIsUserMenuOpen(!isUserMenuOpen)}
+                  className="flex items-center gap-2 px-4 py-2 rounded-lg bg-purple-500/10 hover:bg-purple-500/20 transition-colors"
+                >
+                  <div className="w-8 h-8 rounded-full bg-gradient-to-br from-purple-500 to-cyan-500 flex items-center justify-center text-white font-bold">
+                    {currentUser.name.charAt(0).toUpperCase()}
+                  </div>
+                  <span className="text-white font-medium">{currentUser.name}</span>
+                  <svg className={`w-4 h-4 transition-transform ${isUserMenuOpen ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                  </svg>
+                </button>
+                
+                {isUserMenuOpen && (
+                  <div className="absolute right-0 mt-2 w-48 card py-2 shadow-xl">
+                    <div className="px-4 py-2 border-b border-slate-700">
+                      <p className="text-sm text-gray-400">Signed in as</p>
+                      <p className="text-sm font-semibold text-white truncate">{currentUser.email}</p>
+                    </div>
+                    <button
+                      onClick={() => {
+                        onSignOut();
+                        setIsUserMenuOpen(false);
+                      }}
+                      className="w-full text-left px-4 py-2 text-red-400 hover:bg-white/5 transition-colors"
+                    >
+                      Sign Out
+                    </button>
+                  </div>
+                )}
+              </div>
+            ) : (
+              <Link
+                to="/signin"
+                className="hidden sm:block btn btn-primary text-sm"
+              >
+                Sign In
+              </Link>
+            )}
 
             {/* Mobile Menu Button */}
             <button
@@ -117,9 +155,24 @@ function Navbar({ cartCount, onCartClick }: NavbarProps) {
             <Link to="/categories" className="block text-gray-300 hover:text-purple-400 transition-colors font-medium py-2">
               Categories
             </Link>
-            <Link to="/signin" className="block btn btn-primary text-sm">
-              Sign In
-            </Link>
+            {currentUser ? (
+              <div className="pt-2 border-t border-white/10">
+                <p className="text-sm text-gray-400 mb-2">Signed in as {currentUser.name}</p>
+                <button
+                  onClick={() => {
+                    onSignOut();
+                    setIsMenuOpen(false);
+                  }}
+                  className="block btn btn-outline text-sm w-full"
+                >
+                  Sign Out
+                </button>
+              </div>
+            ) : (
+              <Link to="/signin" className="block btn btn-primary text-sm">
+                Sign In
+              </Link>
+            )}
           </div>
         )}
       </div>
