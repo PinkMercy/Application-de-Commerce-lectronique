@@ -100,6 +100,13 @@ function Navbar({ cartCount, onCartClick, currentUser, onSignOut }: NavbarProps)
                       <p className="text-sm text-gray-400">Signed in as</p>
                       <p className="text-sm font-semibold text-white truncate">{currentUser.email}</p>
                     </div>
+                    <Link
+                      to="/profile"
+                      onClick={() => setIsUserMenuOpen(false)}
+                      className="block w-full text-left px-4 py-2 hover:bg-white/5 transition-colors"
+                    >
+                      My Profile
+                    </Link>
                     <button
                       onClick={() => {
                         onSignOut();
@@ -158,6 +165,13 @@ function Navbar({ cartCount, onCartClick, currentUser, onSignOut }: NavbarProps)
             {currentUser ? (
               <div className="pt-2 border-t border-white/10">
                 <p className="text-sm text-gray-400 mb-2">Signed in as {currentUser.name}</p>
+                <Link
+                  to="/profile"
+                  onClick={() => setIsMenuOpen(false)}
+                  className="block btn btn-primary text-sm w-full mb-2"
+                >
+                  My Profile
+                </Link>
                 <button
                   onClick={() => {
                     onSignOut();
