@@ -1,17 +1,53 @@
-import { Link } from 'react-router-dom';
+/* eslint-disable @typescript-eslint/no-explicit-any */
+import { Link, useNavigate } from 'react-router-dom';
 import { useState } from 'react';
 
 function SignUp() {
+  const navigate = useNavigate();
   const [formData, setFormData] = useState({
     name: '',
     email: '',
     password: '',
-    confirmPassword: ''
+    confirmPassword: '' ,
+    adress : ""
   });
+  const [error, setError] = useState('');
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    console.log('Sign up:', formData);
+    setError('');
+
+    // Validate passwords match
+    if (formData.password !== formData.confirmPassword) {
+      setError('Passwords do not match');
+      return;
+    }
+
+    // Get existing users from localStorage
+    const usersJson = localStorage.getItem('users');
+    const users = usersJson ? JSON.parse(usersJson) : [];
+
+    // Check if email already exists
+    if (users.some((user: any) => user.email === formData.email)) {
+      setError('Email already registered');
+      return;
+    }
+
+    // Add new user
+    const newUser = {
+      name: formData.name,
+      email: formData.email,
+      password: formData.password,
+      adress: formData.adress
+    };
+    users.push(newUser);
+    localStorage.setItem('users', JSON.stringify(users));
+
+    // Auto sign in after sign up
+    localStorage.setItem('currentUser', JSON.stringify({ name: newUser.name, email: newUser.email }));
+
+    // Redirect to home
+    navigate('/');
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -23,12 +59,17 @@ function SignUp() {
       <div className="max-w-md w-full">
         <div className="text-center mb-8">
           <h1 className="text-4xl font-bold mb-2">
-            Join <span className="text-gradient">TechVault</span>
+            Join <span className="text-gradient">SunTech</span>
           </h1>
           <p className="text-gray-400">Create your account to get started</p>
         </div>
 
         <div className="card p-8">
+          {error && (
+            <div className="mb-4 p-3 bg-red-500/10 border border-red-500 rounded-lg text-red-400 text-sm">
+              {error}
+            </div>
+          )}
           <form onSubmit={handleSubmit} className="space-y-6">
             <div>
               <label className="block text-sm font-medium mb-2">Full Name</label>
@@ -52,6 +93,20 @@ function SignUp() {
                 onChange={handleChange}
                 className="input w-full"
                 placeholder="you@example.com"
+                required
+              />
+            </div>
+             
+
+             <div>
+              <label className="block text-sm font-medium mb-2">Adress</label>
+              <input
+                type="text"
+                name="adress"
+                value={formData.adress}
+                onChange={handleChange}
+                className="input w-full"
+                placeholder="San diego 3535"
                 required
               />
             </div>
@@ -81,6 +136,7 @@ function SignUp() {
                 required
               />
             </div>
+
 
             <div className="text-sm">
               <label className="flex items-start gap-2">
