@@ -40,9 +40,9 @@ SunTech is a comprehensive e-commerce platform designed for purchasing computer 
 - **TypeScript ESLint** - TypeScript-specific linting rules
 - **Vite Plugin React** - Hot module replacement and fast refresh
 
-### Additional Libraries
-- **Axios 1.13.1** - HTTP client for API requests
-- **React Hook Form 7.65.0** - Form validation and management
+<!-- ### Additional Libraries -->
+<!-- - **Axios 1.13.1** - HTTP client for API requests -->
+<!-- - **React Hook Form 7.65.0** - Form validation and management -->
 
 ## ✨ Features
 
@@ -113,7 +113,7 @@ SunTech is a comprehensive e-commerce platform designed for purchasing computer 
 - **Stock Indicators**: Low stock warnings
 - **Similar Products**: Recommendations based on category
 - **Product Specifications**: Detailed technical specs for each product
-- **Feature Lists**: Highlighted key features
+<!-- - **Feature Lists**: Highlighted key features -->
 
 ## 📦 Installation Instructions
 
@@ -253,6 +253,10 @@ Add routes in `src/App.tsx`:
 
 ### Home Page
 The landing page showcases featured products, categories, and promotional banners with a modern dark theme.
+<p align="center">
+  <img src="src\screenshots\homepage.png" alt="App Preview" width="400"/>
+</p>
+
 
 ### Product Listing
 Advanced filtering options with category selection, price ranges, and sorting capabilities.
@@ -325,7 +329,7 @@ This project is created for educational purposes.
 
 ## 👤 Author
 
-**SunTech Development Team**
+**Rahma Othmani**
 
 ---
 
