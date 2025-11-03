@@ -97,7 +97,7 @@ function Products({ addToCart }: ProductsProps) {
 
     // Empty stars to complete 5 stars
     const totalStarsShown = fullStars + (decimal > 0 ? 1 : 0);
-    const emptyStars = 5 - totalStarsShown;
+    const emptyStars = 4 - totalStarsShown;
     for (let i = 0; i < emptyStars; i++) {
       stars.push(
         <span key={`empty-${i}`} className="text-gray-600">★</span>
