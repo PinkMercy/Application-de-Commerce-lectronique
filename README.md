@@ -327,6 +327,11 @@ Contributions are welcome! Please follow these steps:
 
 This project is created for educational purposes.
 
+## 🌐 Live Demo
+
+🚀 **Explore the deployed app here:**  
+👉 [https://suntechnology.netlify.app/](https://suntechnology.netlify.app/)
+
 ## 👤 Author
 
 **Rahma Othmani**
