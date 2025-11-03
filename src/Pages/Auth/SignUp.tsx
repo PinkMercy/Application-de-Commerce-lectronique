@@ -8,8 +8,8 @@ function SignUp() {
     name: '',
     email: '',
     password: '',
-    confirmPassword: '' ,
-    adress : ""
+    confirmPassword: '',
+    adress: ""
   });
   const [error, setError] = useState('');
 
@@ -20,6 +20,22 @@ function SignUp() {
     // Validate passwords match
     if (formData.password !== formData.confirmPassword) {
       setError('Passwords do not match');
+      return;
+    }
+
+    // Validate passwords length
+    // if (formData.password.length <= 6) {
+    //   setError('Passwords must be at least 6 letters long');
+    //   return;
+    // }
+
+    // Validate password strength using regex
+    const strongPasswordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@#$%^&*!])[A-Za-z\d@#$%^&*!]{8,}$/;
+
+    if (!strongPasswordRegex.test(formData.password)) {
+      setError(
+        'Password must be at least 8 characters long and include uppercase, lowercase, number, and special symbol.'
+      );
       return;
     }
 
@@ -96,9 +112,9 @@ function SignUp() {
                 required
               />
             </div>
-             
 
-             <div>
+
+            <div>
               <label className="block text-sm font-medium mb-2">Adress</label>
               <input
                 type="text"
