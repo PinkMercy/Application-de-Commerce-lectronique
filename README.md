@@ -1,240 +1,332 @@
-# TechVault - Gaming E-Commerce Store
+# SunTech E-Commerce Platform
 
-## 🎮 Overview
-A modern, high-performance e-commerce website for gaming and computer hardware with a stunning dark theme design.
+A modern, full-featured e-commerce web application built with React, TypeScript, and Tailwind CSS. This platform specializes in computer hardware and tech products, offering a seamless shopping experience with user authentication, product management, and order tracking.
+
+![SunTech Logo](https://img.shields.io/badge/SunTech-E--Commerce-purple?style=for-the-badge)
+
+## 📋 Table of Contents
+
+- [Description](#-description)
+- [Technologies Used](#-technologies-used)
+- [Features](#-features)
+- [Installation Instructions](#-installation-instructions)
+- [Project Structure](#-project-structure)
+- [Usage](#-usage)
+- [Screenshots](#-screenshots)
+- [Contributing](#-contributing)
+
+## 🎯 Description
+
+SunTech is a comprehensive e-commerce platform designed for purchasing computer hardware and technology products. The application provides a modern, responsive interface with advanced filtering, user authentication, shopping cart management, and order tracking capabilities. All data is persisted using localStorage for a seamless user experience.
+
+## 🛠️ Technologies Used
+
+### Frontend Framework
+- **React 19.1.1** - Modern UI library for building user interfaces
+- **TypeScript 5.9.3** - Type-safe JavaScript for better development experience
+- **Vite 7.1.7** - Next-generation frontend build tool
+
+### Routing & State Management
+- **React Router DOM 7.9.5** - Client-side routing for single-page application
+- **React Hooks** - Built-in state management with useState, useEffect, useMemo
+
+### Styling
+- **Tailwind CSS 4.1.16** - Utility-first CSS framework
+- **PostCSS 8.5.6** - CSS transformations
+- **Autoprefixer 10.4.21** - Automatic vendor prefixing
+
+### Development Tools
+- **ESLint 9.36.0** - Code linting and quality
+- **TypeScript ESLint** - TypeScript-specific linting rules
+- **Vite Plugin React** - Hot module replacement and fast refresh
+
+### Additional Libraries
+- **Axios 1.13.1** - HTTP client for API requests
+- **React Hook Form 7.65.0** - Form validation and management
 
 ## ✨ Features
 
-### Design & UI
-- **Dark Gaming Theme**: Modern dark mode with vibrant purple and cyan accents
-- **Responsive Design**: Fully responsive across all devices
-- **Smooth Animations**: Glass morphism effects, hover animations, and transitions
-- **Custom Color Scheme**: 
-  - Primary: Vibrant Purple (#8B5CF6)
-  - Secondary: Cyan Accent (#06B6D4)
-  - Accent: Amber Highlights (#F59E0B)
-  - Background: Dark Blue-Gray (#0F172A)
+### 1. User Authentication System
+- **Sign Up**: Create new account with name, email, address, and password
+- **Sign In**: Secure login with email and password validation
+- **Profile Management**: Edit personal information and update password
+- **Session Persistence**: User sessions maintained across page refreshes using localStorage
 
-### Pages & Components
+### 2. Product Catalog
+- **Product Listing**: Browse through 20+ tech products across 10 categories
+- **Advanced Filtering**:
+  - Filter by category (GPUs, CPUs, RAM, Motherboards, etc.)
+  - Price range filters (preset ranges + custom min/max)
+  - Minimum rating filter
+- **Sorting Options**:
+  - Featured products
+  - Newest arrivals
+  - Price: Low to High
+  - Price: High to Low
+  - Top Rated
+- **Product Details**: Comprehensive product pages with specifications, features, and multiple images
+- **Star Ratings**: Visual star ratings with quarter-star precision (2.0 - 4.0 scale)
 
-#### 1. Home Page
-- Eye-catching hero section with animated gradient backgrounds
-- Featured categories showcase
-- Featured products carousel
-- Stats section (500+ Products, 50K+ Customers, 4.9★ Rating)
-- Features section (Fast Shipping, Secure Payment, 24/7 Support)
+### 3. Shopping Cart
+- **Add to Cart**: Add products from product list or detail pages
+- **Quantity Management**: Adjust quantities directly in cart
+- **Price Calculation**: Real-time subtotal, delivery fee ($10), and total calculation
+- **Cart Persistence**: Cart items saved in localStorage
+- **Remove Items**: Delete unwanted products from cart
 
-#### 2. Products Page
-- Advanced filtering system:
-  - Filter by category
-  - Filter by price range
-  - Sort by: Featured, Price (Low/High), Rating
-- Product grid with hover effects
-- Sale badges and stock indicators
-- Quick add to cart functionality
+### 4. Favorites System
+- **Add/Remove Favorites**: Heart icon on product cards to save favorites
+- **Favorites Page**: View all favorite products in profile
+- **User-Specific**: Each user has their own favorite list
 
-#### 3. Categories Page
-- Beautiful category cards with images
-- Product count per category
-- Smooth hover animations
-- Direct navigation to filtered products
+### 5. Order Management
+- **Checkout Process**: One-click checkout with confirmation popup
+- **Order History**: Complete history of all past orders
+- **Order Details**: View items, quantities, prices, and order date
+- **Delivery Tracking**: Fixed $10 delivery fee included in orders
 
-#### 4. Product Detail Page
-- Multiple product images with image selector
-- Detailed specifications
-- Key features list
-- Quantity selector
-- Add to cart with quantity
-- Breadcrumb navigation
-- Stock status indicators
+### 6. User Profile
+- **Three-Tab Interface**:
+  - **Personal Info**: View and edit name, email, and address
+  - **Order History**: Track all past purchases with full details
+  - **Favorites**: Manage saved products
+- **Profile Updates**: Real-time profile information updates
+- **Password Change**: Secure password update functionality
 
-#### 5. Shopping Cart
-- Slide-out cart sidebar
-- Quantity adjustment
-- Item removal
-- Real-time total calculation
-- Empty cart state
+### 7. Search & Navigation
+- **Search Bar**: Search products by name (desktop and mobile)
+- **Category Navigation**: Quick access to product categories
+- **Breadcrumb Navigation**: Easy navigation trail on product pages
+- **Responsive Menu**: Mobile-optimized navigation menu
 
-#### 6. Navigation
-- Sticky navbar with glass effect
-- Search functionality
-- Cart counter with animation
-- Mobile-responsive menu
-- Quick access to auth pages
+### 8. UI/UX Features
+- **Responsive Design**: Fully responsive across desktop, tablet, and mobile
+- **Dark Theme**: Modern dark mode interface
+- **Loading States**: Visual feedback for user actions
+- **Error Handling**: User-friendly error messages
+- **Smooth Animations**: Transitions and hover effects
+- **Scroll to Top**: Automatic scroll to top on page navigation
 
-#### 7. Authentication
-- Sign In page
-- Sign Up page
-- Modern form designs
+### 9. Product Features
+- **Multiple Images**: Minimum 3 images per product with gallery view
+- **Sale Badges**: Visual indicators for products on sale
+- **Stock Indicators**: Low stock warnings
+- **Similar Products**: Recommendations based on category
+- **Product Specifications**: Detailed technical specs for each product
+- **Feature Lists**: Highlighted key features
 
-## 🛍️ Product Categories
-
-The store includes 10 comprehensive categories:
-1. **Graphics Cards (GPU)** - High-performance gaming GPUs
-2. **Processors (CPU)** - Intel & AMD processors
-3. **Memory (RAM)** - DDR5 memory modules
-4. **Motherboards** - Premium motherboards
-5. **Storage** - SSDs and NVMe drives
-6. **Cases** - PC cases with RGB
-7. **Power Supplies (PSU)** - Reliable power units
-8. **Cooling** - AIOs and air coolers
-9. **Peripherals** - Gaming mice and keyboards
-10. **Monitors** - High-refresh gaming displays
-
-## 📦 Product Data
-
-The store includes **28 realistic products** with:
-- Detailed specifications
-- Multiple images
-- Real pricing (including sale prices)
-- Stock levels
-- User ratings and reviews
-- Brand information
-- Feature lists
-
-## 🎨 Design Highlights
-
-### Custom CSS Classes
-- `.glass` - Glass morphism effect
-- `.card` - Styled cards with hover effects
-- `.btn-primary`, `.btn-secondary`, `.btn-outline` - Custom buttons
-- `.text-gradient` - Gradient text effects
-- `.badge` - Status badges
-- `.shimmer` - Loading shimmer effect
-- `.sale-pulse` - Pulsing sale badge
-
-### Color System
-- Complete palette with 50-900 shades
-- Primary, Secondary, Accent, and Dark colors
-- Custom shadows and glow effects
-- Gradient backgrounds
-
-### Animations
-- Smooth transitions
-- Hover scale effects
-- Pulse animations
-- Float animations
-- Shimmer loading effects
-
-## 🚀 Technologies Used
-
-- **React 19** - Latest React version
-- **TypeScript** - Type-safe development
-- **Tailwind CSS 4** - Utility-first CSS framework
-- **React Router** - Client-side routing
-- **Vite** - Fast build tool
-
-## 🛠️ Getting Started
+## 📦 Installation Instructions
 
 ### Prerequisites
-- Node.js (v18 or higher)
-- npm or yarn
+- Node.js (version 18 or higher)
+- npm or yarn package manager
+- Git
 
-### Installation
+### Step 1: Clone the Repository
 ```bash
-# Install dependencies
-npm install
-
-# Run development server
-npm run dev
-
-# Build for production
-npm run build
-
-# Preview production build
-npm run preview
+git clone <repository-url>
+cd Application-de-Commerce-lectronique-main
 ```
 
-### Development Server
-The application runs on `http://localhost:5173` (or next available port)
+### Step 2: Install Dependencies
+```bash
+npm install
+```
+
+### Step 3: Run Development Server
+```bash
+npm run dev
+```
+
+The application will be available at `http://localhost:5173`
+
+### Step 4: Build for Production
+```bash
+npm run build
+```
+
+### Step 5: Preview Production Build
+```bash
+npm run preview
+```
 
 ## 📁 Project Structure
 
 ```
-src/
-├── Components/
-│   ├── Navbar.tsx          # Navigation bar
-│   ├── Cart.tsx            # Shopping cart
-│   └── Sidebar.tsx         # Sidebar component
-├── Pages/
-│   ├── Home.tsx            # Home page
-│   ├── Products.tsx        # Products listing
-│   ├── Categories.tsx      # Categories overview
-│   ├── Productinfo.tsx     # Product details
-│   └── Auth/
-│       ├── SignIn.tsx      # Sign in page
-│       └── SignUp.tsx      # Sign up page
-├── data/
-│   └── products.json       # Product data
-├── App.tsx                 # Main app component
-├── index.css              # Global styles
-└── main.tsx               # Entry point
+Application-de-Commerce-lectronique-main/
+├── public/                      # Static assets
+├── src/
+│   ├── Components/             # Reusable components
+│   │   ├── Cart.tsx           # Shopping cart sidebar
+│   │   ├── Navbar.tsx         # Navigation bar with user menu
+│   │   ├── ScrollToTop.tsx    # Auto-scroll component
+│   │   ├── SearchBar.tsx      # Product search
+│   │   └── Sidebar.tsx        # Filter sidebar
+│   │
+│   ├── Pages/                  # Page components
+│   │   ├── Auth/
+│   │   │   ├── SignIn.tsx     # Login page
+│   │   │   └── SignUp.tsx     # Registration page
+│   │   ├── Categories.tsx     # Category overview
+│   │   ├── Home.tsx           # Landing page
+│   │   ├── Productinfo.tsx    # Product detail page
+│   │   ├── Products.tsx       # Product listing page
+│   │   └── Profile.tsx        # User profile with tabs
+│   │
+│   ├── data/
+│   │   └── products.json      # Product catalog data
+│   │
+│   ├── api/
+│   │   └── productService.ts  # API service layer
+│   │
+│   ├── App.tsx                 # Main application component
+│   ├── main.tsx               # Application entry point
+│   └── index.css              # Global styles
+│
+├── eslint.config.js            # ESLint configuration
+├── tailwind.config.js          # Tailwind CSS configuration
+├── tsconfig.json               # TypeScript configuration
+├── vite.config.ts              # Vite configuration
+├── package.json                # Dependencies and scripts
+└── README.md                   # Project documentation
 ```
 
-## 🎯 Key Features Implementation
+## 🚀 Usage
 
-### Cart Management
-- Add to cart with quantity
-- Update item quantities
-- Remove items
-- Calculate totals
-- Persist across navigation
+### For Users
 
-### Product Filtering
-- Category-based filtering
-- Price range filtering
-- Multi-criteria sorting
-- Real-time updates
+1. **Browse Products**
+   - Visit the home page to see featured products
+   - Navigate to "Products" to browse the full catalog
+   - Use filters to narrow down your search
+
+2. **Create Account**
+   - Click "Sign In" in the navbar
+   - Click "Sign Up" to create a new account
+   - Fill in your details and submit
+
+3. **Shop**
+   - Add products to cart using "Add to Cart" button
+   - View cart by clicking the cart icon
+   - Adjust quantities or remove items
+   - Click "Proceed to Checkout" to complete purchase
+
+4. **Manage Profile**
+   - Click your name in the navbar
+   - Select "My Profile"
+   - View/edit personal info, order history, and favorites
+
+### For Developers
+
+#### Adding New Products
+Edit `src/data/products.json`:
+```json
+{
+  "id": "product-id",
+  "name": "Product Name",
+  "category": "category-id",
+  "brand": "Brand Name",
+  "price": 99.99,
+  "originalPrice": 129.99,
+  "rating": 3.8,
+  "reviews": 150,
+  "stock": 25,
+  "image": "image-url",
+  "images": ["url1", "url2", "url3"],
+  "description": "Product description",
+  "specs": {},
+  "features": [],
+  "createdAt": "2025-01-01"
+}
+```
+
+#### Customizing Styles
+Modify `tailwind.config.js` for theme customization or edit `src/index.css` for global styles.
+
+#### Adding New Routes
+Add routes in `src/App.tsx`:
+```tsx
+<Route path="/new-page" element={<NewPage />} />
+```
+
+## 📸 Screenshots
+
+### Home Page
+The landing page showcases featured products, categories, and promotional banners with a modern dark theme.
+
+### Product Listing
+Advanced filtering options with category selection, price ranges, and sorting capabilities.
+
+### Product Details
+Comprehensive product information with image gallery, specifications, features, and similar product recommendations.
+
+### Shopping Cart
+Slide-out cart panel showing items, quantities, subtotal, delivery fee, and total price.
+
+### User Profile
+Tabbed interface for managing personal information, viewing order history, and accessing favorite products.
+
+### Order History
+Detailed view of past purchases with product information, quantities, prices, and order dates.
+
+### Checkout Success
+Confirmation popup after successful order placement.
 
 ### Responsive Design
-- Mobile-first approach
-- Breakpoints: sm (640px), md (768px), lg (1024px), xl (1280px)
-- Touch-friendly interfaces
-- Optimized images
+Fully optimized mobile interface with hamburger menu and touch-friendly controls.
 
-## 🌟 Visual Enhancements
+## 🔐 Data Storage
 
-- Custom scrollbar styling
-- Backdrop blur effects
-- Gradient overlays
-- Box shadows and glows
-- Smooth page transitions
-- Loading states
+The application uses localStorage for data persistence:
 
-## 📱 Mobile Features
+- **users**: User account information (email, password, name, address)
+- **currentUser**: Active user session
+- **cart**: Shopping cart items
+- **orders**: Order history for all users
+- **favorites**: User-specific favorite products
 
-- Collapsible mobile menu
-- Touch-optimized buttons
-- Mobile-friendly forms
-- Optimized images
-- Fast load times
+## 🎨 Color Scheme
 
-## 🎨 Color Scheme Details
+- **Primary**: Purple (#a855f7 to #8b5cf6)
+- **Secondary**: Cyan (#06b6d4)
+- **Background**: Dark gray (#0f172a)
+- **Cards**: Slate (#1e293b)
+- **Text**: White and gray shades
+- **Accent**: Red for favorites, Green for success
 
-```css
-Primary Purple: #8B5CF6
-Secondary Cyan: #06B6D4
-Accent Amber: #F59E0B
-Dark Background: #0F172A
-Dark Surface: #1E293B
-Dark Border: #334155
-```
+## 🌟 Key Highlights
 
-## 🔮 Future Enhancements
+- ✅ Fully functional e-commerce platform
+- ✅ 100% TypeScript for type safety
+- ✅ Responsive design for all devices
+- ✅ localStorage-based persistence (no backend required)
+- ✅ Modern UI with Tailwind CSS
+- ✅ User authentication and authorization
+- ✅ Complete shopping cart functionality
+- ✅ Order tracking and history
+- ✅ Favorites system
+- ✅ Advanced product filtering and sorting
+- ✅ Profile management
+- ✅ Clean and maintainable code structure
 
-- User authentication integration
-- Payment gateway
-- Order management
-- Product reviews system
-- Wishlist functionality
-- Search autocomplete
-- Product comparison
-- Live chat support
+## 🤝 Contributing
 
-## 📄 License
+Contributions are welcome! Please follow these steps:
 
-This project is for demonstration purposes.
+1. Fork the repository
+2. Create a feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+
+## 📝 License
+
+This project is created for educational purposes.
+
+## 👤 Author
+
+**SunTech Development Team**
 
 ---
 
-Built with ❤️ for gaming enthusiasts
+**Note**: This is a demo application using localStorage for data persistence. For production use, integrate with a backend API and proper database.
