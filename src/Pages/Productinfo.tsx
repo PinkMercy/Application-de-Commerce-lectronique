@@ -1,5 +1,6 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { useParams, Link } from 'react-router-dom';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import productsData from '../data/products.json';
 
 interface ProductinfoProps {
@@ -11,6 +12,44 @@ function Productinfo({ addToCart }: ProductinfoProps) {
   const product = productsData.products.find(p => p.id === id);
   const [selectedImage, setSelectedImage] = useState(0);
   const [quantity, setQuantity] = useState(1);
+  const [isFavorite, setIsFavorite] = useState(false);
+
+  // Check if product is in favorites
+  useEffect(() => {
+    const currentUser = localStorage.getItem('currentUser');
+    if (currentUser && product) {
+      const user = JSON.parse(currentUser);
+      const favoritesJson = localStorage.getItem('favorites');
+      const allFavorites = favoritesJson ? JSON.parse(favoritesJson) : {};
+      const userFavorites = allFavorites[user.email] || [];
+      setIsFavorite(userFavorites.some((p: any) => p.id === product.id));
+    }
+  }, [product]);
+
+  const toggleFavorite = () => {
+    const currentUser = localStorage.getItem('currentUser');
+    if (!currentUser) {
+      alert('Please sign in to add favorites');
+      return;
+    }
+
+    const user = JSON.parse(currentUser);
+    const favoritesJson = localStorage.getItem('favorites');
+    const allFavorites = favoritesJson ? JSON.parse(favoritesJson) : {};
+    const userFavorites = allFavorites[user.email] || [];
+
+    if (isFavorite) {
+      // Remove from favorites
+      allFavorites[user.email] = userFavorites.filter((p: any) => p.id !== product?.id);
+      setIsFavorite(false);
+    } else {
+      // Add to favorites
+      allFavorites[user.email] = [...userFavorites, product];
+      setIsFavorite(true);
+    }
+
+    localStorage.setItem('favorites', JSON.stringify(allFavorites));
+  };
 
   // Get similar products (same category, exclude current product)
   const similarProducts = productsData.products
@@ -126,8 +165,21 @@ function Productinfo({ addToCart }: ProductinfoProps) {
           {/* Info */}
           <div className="space-y-6">
             <div>
-              <p className="text-gray-400 mb-2">{product.brand}</p>
-              <h1 className="text-4xl font-bold mb-4">{product.name}</h1>
+              <div className="flex items-start justify-between mb-2">
+                <div className="flex-1">
+                  <p className="text-gray-400 mb-2">{product.brand}</p>
+                  <h1 className="text-4xl font-bold mb-4">{product.name}</h1>
+                </div>
+                <button
+                  onClick={toggleFavorite}
+                  className="p-3 bg-slate-800 hover:bg-slate-700 rounded-full transition-colors"
+                  title={isFavorite ? 'Remove from favorites' : 'Add to favorites'}
+                >
+                  <svg className="w-7 h-7" fill={isFavorite ? 'currentColor' : 'none'} stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" className={isFavorite ? 'text-red-500' : 'text-white'} />
+                  </svg>
+                </button>
+              </div>
 
               <div className="flex items-center gap-4 mb-4">
                 <div className="flex items-center gap-2">
