@@ -260,24 +260,45 @@ The landing page showcases featured products, categories, and promotional banner
 
 ### Product Listing
 Advanced filtering options with category selection, price ranges, and sorting capabilities.
+<p align="center">
+  <img src="src\screenshots\productlisting.png" alt="App Preview" width="400"/>
+</p>
 
 ### Product Details
 Comprehensive product information with image gallery, specifications, features, and similar product recommendations.
+<p align="center">
+  <img src="src\screenshots\productdetail.png" alt="App Preview" width="400"/>
+</p>
 
 ### Shopping Cart
 Slide-out cart panel showing items, quantities, subtotal, delivery fee, and total price.
+<p align="center">
+  <img src="src\screenshots\shoppingcart.png" alt="App Preview" width="400"/>
+</p>
 
 ### User Profile
 Tabbed interface for managing personal information, viewing order history, and accessing favorite products.
+<p align="center">
+  <img src="src\screenshots\useerprofile.png" alt="App Preview" width="400"/>
+</p>
 
 ### Order History
 Detailed view of past purchases with product information, quantities, prices, and order dates.
+<p align="center">
+  <img src="src\screenshots\orderhistory.png" alt="App Preview" width="400"/>
+</p>
 
 ### Checkout Success
 Confirmation popup after successful order placement.
+<p align="center">
+  <img src="src\screenshots\checkoutsuccess.png" alt="App Preview" width="400"/>
+</p>
 
 ### Responsive Design
 Fully optimized mobile interface with hamburger menu and touch-friendly controls.
+<p align="center">
+  <img src="src\screenshots\responsivedesign.png" alt="App Preview" width="400"/>
+</p>
 
 ## 🔐 Data Storage
 
